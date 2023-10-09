@@ -1,0 +1,114 @@
+.topPage{
+  margin-left: 0 !important;
+  width: 100% !important;
+  padding: 0 !important
+}
+
+.rendingPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 500px !important;
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+.rendingPage::before {
+  border-radius: 50%;
+  width: 480px;
+  margin-left: -400px;
+}
+
+.rendingPage::after {
+  width: 240px;
+  z-index: -1;
+}
+
+.rendingPage::before,
+.rendingPage::after {
+  content: '';
+  left: 50%;
+  position: absolute;
+  filter: blur(45px);
+  transform: translateZ(0);
+}
+.me {
+  position: relative;
+}
+
+.rendingPage article{
+  width: 80% !important;
+  margin-left: -15%;
+}
+
+.rendingPage aside{
+  margin-right: -50%;
+  position: absolute;
+  z-index: -10;
+  top: -40px !important;
+}
+
+.rendingPage .heading{
+  font-weight: bold;
+}
+
+.rendingPage .subheading{
+  margin-top: 20px !important;
+}
+
+.rendingPage .contact{
+  margin-top: 10px !important;
+  border-radius: 5px;
+  border: 1px solid var(--yellow);
+  width: 115px !important;
+  padding: 5px 10px ;
+  font-family: fantasy;
+  font-weight: lighter !important;
+  text-align: center;
+}
+.rendingPage .contact:hover{
+  border: 1px solid rgb(85, 150, 150);
+  cursor: pointer;
+  color: #8884c9;
+}
+.rendingPage article b{
+  color: var(--yellow);
+}
+.rendingPage aside img{
+  width: 150% !important;
+  height: auto !important;
+}
+.topPage .quoteCont{
+  width: 100%;
+  height: 100px !important;
+}
+.topPage .quoteCont article, .topPage .quoteCont aside{
+  height: auto !important;
+  border: 1px solid grey !important;
+  padding: 10px 10px !important;
+}
+.topPage .quoteCont article{
+  width: 100% !important;
+}
+.topPage .quoteCont aside{
+  height: 40px !important;
+  width: auto !important;
+}
+/* Mobile */
+@media (max-width: 700px) {
+  .rendingPage {
+    padding: 8rem 0 6rem;
+  }
+
+  .rendingPage::before {
+    transform: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .me {
+    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
+  }
+}
+
