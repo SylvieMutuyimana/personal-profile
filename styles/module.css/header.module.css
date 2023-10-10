@@ -1,0 +1,29 @@
+.nav{
+  width: 100%;
+}
+.nav article{
+  width: 30%;
+  font-weight:bolder;
+  font-size:30px;
+  padding-left: 5%;
+}
+.nav .author{
+  color: var(--actual_yellow);
+  box-shadow: 0px 1px var(--yellow);
+}
+.nav aside{
+  width: 70%;
+  text-align: right !important;
+}
+.nav aside a {
+  margin-right: 15px !important;
+}
+.nav a:hover{
+  color:var(--yellow);
+  font-size: large;
+}
+.nav a.active{
+  color:var(--actual_yellow);
+  text-decoration:dashed;
+  font-weight: bold;
+}

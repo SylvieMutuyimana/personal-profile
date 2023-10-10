@@ -1,0 +1,13 @@
+[
+    {
+        "_id":"45445", "author":"Beyonce",
+        "quote": "Do what you were born to do you have to trust yourself"
+    },
+    {
+        "_id":"vdf", "author":"Stan Lee",
+        "quote": "With great power comes great responsibility."
+    },    {
+        "_id":"gvfc", "author":"John Lennon",
+        "quote": "Everything will be okay in the end. If it's not okay, it's not the end."
+    }
+]

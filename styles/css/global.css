@@ -1,0 +1,66 @@
+:root {
+  --background_start_rgb: 0, 0, 0;
+  --background_end_rgb: 0, 0, 0;
+
+  --primary_glow: radial-gradient(rgba(61, 169, 173, 0.274), rgba(1, 65, 255, 0));
+  --secondary_glow: linear-gradient(
+    to bottom right,
+    #01f7ff4d,
+    rgba(33, 134, 121, 0.089),
+    #01f7ff4d
+  );
+
+  --callout_rgb: 20, 20, 20;
+  --callout_border_rgb: 108, 108, 108;
+  --card_rgb: 100, 100, 100;
+  --card_border_rgb: 200, 200, 200;
+  --actual_yellow:#d9c301 ;
+  --lightactual_yellow:#dfd36eab ;
+  --yellow: #01afff; 
+  --light_yellow: #80b5ce49; 
+  --borderRadius:7px;
+  --green: #09c509;
+}
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+  'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+  'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;;
+  font-family: 'Brush Script MT', cursive;
+}
+
+body {
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background_end_rgb))
+    )
+    rgb(var(--background_start_rgb));
+}
+
+article{
+  float: left;
+}
+aside{
+  float: right;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
