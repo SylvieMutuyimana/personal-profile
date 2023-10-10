@@ -3,9 +3,6 @@ import styles from '../styles/module.css/footer.module.css'
 import componentStyles from '../styles/module.css/components.module.css';
 
 const Footer = () => {
-
-
-
   return (
     <div className={styles.footer} id={styles.contact}>    
         <div className={componentStyles.group}>

@@ -5,10 +5,8 @@ from api.quotes import allquotesData, quoteRoute
 from api.skills import allSkills_Route, skillTypeData_Route
 from api.projects import allProjects_Route, projectTypeData_Route
 
-
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})  # Allow CORS for all routes and origins
-
 
 # Define route for root URL
 @app.route("/", methods=["GET"])

@@ -31,12 +31,6 @@
   z-index: 999999;
 
 }
-/* layout.module.css */
-.green-background {
-  background-color: green;
-  transition: background-color 0.3s ease; /* Optional: Add a smooth transition effect */
-}
-
 @media (prefers-color-scheme: dark) {
 
 }
