@@ -38,4 +38,4 @@ app.add_url_rule('/projects', 'allProjects_Route', allProjects_Route, methods=['
 app.add_url_rule('/projects/<projectType>', 'projectTypeData_Route', projectTypeData_Route, methods=['GET'])
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000)
+    app.run(debug=True)
