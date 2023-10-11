@@ -47,12 +47,12 @@
 }
 
 .card:hover .done{
-  color: #003000 !important;
+  color: #165516 !important;
   font-weight: bold;
 }
 
 .card:hover .development{
-  color: #012025 !important;
+  color: #1a8fa3 !important;
   font-weight: bold;
 }
 

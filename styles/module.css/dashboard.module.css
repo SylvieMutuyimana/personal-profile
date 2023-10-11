@@ -123,7 +123,7 @@
 }
 @media (prefers-color-scheme: dark) {
   .me {
-    filter: invert(80%) hue-rotate(10deg) saturate(150%) brightness(120%) contrast(150%) drop-shadow(0 0 0.2rem #ffe600);
+    filter: invert(70%) hue-rotate(10deg) saturate(110%) brightness(80%) contrast(200%) drop-shadow(0 0 0.3rem #ffe600);
   }
 }
 
