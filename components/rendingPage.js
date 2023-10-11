@@ -11,6 +11,10 @@ const rendingPage = () => {
         "quote": "Do what you were born to do you have to trust yourself"
     },
     {
+      "_id":"dfd", "author":"Dale Carnegie",
+      "quote":"Remember, today is the tomorrow you worried about yesterday."
+    },
+    {
         "_id":"vdf", "author":"Stan Lee",
         "quote": "With great power comes great responsibility."
     },    {
