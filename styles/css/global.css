@@ -15,11 +15,11 @@
   --card_rgb: 100, 100, 100;
   --card_border_rgb: 200, 200, 200;
   --actual_yellow:#d9c301 ;
-  --lightactual_yellow:#dfd36eab ;
+  --00486B:#dfd36eab ;
   --yellow: #01afff; 
   --light_yellow: #80b5ce49; 
   --borderRadius:7px;
-  --green: #00ff00;
+  --green: #01a001be;
 }
 
 
@@ -47,7 +47,15 @@ body {
     )
     rgb(var(--background_start_rgb));
 }
-
+p{
+  font-size: 16px;
+}
+a{
+  font-size: 16px;
+}
+h2{
+  font-size: 24px !important;
+}
 article{
   float: left;
 }

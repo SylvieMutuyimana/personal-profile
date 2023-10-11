@@ -2,6 +2,7 @@
     width: 100%;
     margin-top:50px;
 }
+
 .paper {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
@@ -47,4 +48,7 @@
     border-bottom: 1px solid ;
     color: black;
     margin-top: 2px;
+  }
+  .paper p:hover{
+    color: #004466;
   }

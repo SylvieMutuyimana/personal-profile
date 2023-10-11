@@ -4,6 +4,7 @@
   max-width: 100%;
   grid-gap: 1rem;
   margin-top: 10px;
+  font-family: 'Brush Script MT', cursive;
 }
 
 .card {
@@ -18,7 +19,13 @@
 .card.project{
   padding-top: 40px !important;
 }
-
+.card .contri{
+  margin-top: 10px;
+  color: #d8c2007c;
+}
+.card:hover .contri{
+  color: #070105;
+}
 .card div.skills{
   align-items: center;
   align-items: center;
@@ -41,19 +48,17 @@
 }
 
 .card .development{
-  color: var(--yellow);
+  color: #027bb3;
   font-weight: bold;
 
 }
 
 .card:hover .done{
   color: #165516 !important;
-  font-weight: bold;
 }
 
 .card:hover .development{
-  color: #1a8fa3 !important;
-  font-weight: bold;
+  color: #002e36 !important;
 }
 
 .card span {
@@ -69,7 +74,6 @@
 .card div {
   margin: 0;
   opacity: 0.6;
-  font-size: 0.9rem;
   line-height: 1.5;
   max-width: 30ch;
 }
@@ -114,11 +118,14 @@
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
-    background: var(--lightactual_yellow);
+    background: #dfd36eab;
     border: 1px solid rgba(var(--card_border_rgb), 0.15);
-    color: black;
+    color: rgb(17, 17, 17);
   }
-
+  .card:hover div{
+    color: #000000;
+    font-size: 17px !important;
+  }
   .card:hover span {
     transform: translateX(4px);
   }

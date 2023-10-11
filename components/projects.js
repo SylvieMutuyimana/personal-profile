@@ -129,10 +129,10 @@ const Projects = () => {
                         </div>
                         <div>
                         </div>
-                        <p>{project.summary}</p>
-                        <p className={componentStyles.top}>
+                        <div>{project.summary}</div>
+                        <div className={componentStyles.contri}>
                           <i>Contributors: {project.collaborators.length}</i>
-                        </p>
+                        </div>
                     </a>
                 ))
             )}
