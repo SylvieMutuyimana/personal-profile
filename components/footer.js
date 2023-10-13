@@ -29,7 +29,7 @@ const Footer = () => {
               Bold Woman</a>
             </p>     
             <p>
-              Linkedin: <a href= {`mailto:mutuyimanasylvie@gmail.com`}>
+              Linkedin: <a href= {'https://www.linkedin.com/in/sylvie-mutuyimana-226233184/'}>
               Sylvie Mutuyimana</a>
             </p>        
           </div>

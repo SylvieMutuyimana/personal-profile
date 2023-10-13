@@ -51,7 +51,15 @@ const Projects = () => {
             "languages":["Flutter", "Firebase"],
             "summary":"A health app to connect patients and doctors",
             "status":"done"
-        }
+        },
+        {
+            "id": "6239aacb-aeb0-4d58-a197-f099d8gfg7bec", "name": "Virtual Lab",
+            "collaborators": ["Polie Vicia", ""],
+            "host": "#", "repository":"",
+            "languages":["Unity", "C#"],
+            "summary":"A virtual lab allowing students to learn biology through interraction with the virtual lab",
+            "status":"done"
+        } 
     ],
     "mini":[
         {
@@ -93,15 +101,7 @@ const Projects = () => {
             "languages":["Figma"],
             "summary":"A school online learning platform ",
             "status":"done"
-        },
-        {
-            "id": "6239aacb-aeb0-4d58-a197-f099d8gfg7bec", "name": "Virtual Lab",
-            "collaborators": ["Polie Vicia", ""],
-            "host": "#", "repository":"",
-            "languages":["Unity", "C#"],
-            "summary":"A virtual lab allowing students to learn biology through interraction with the virtual lab",
-            "status":"done"
-        } 
+        }
     ],
     "client_projects":[
         {
