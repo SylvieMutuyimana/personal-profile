@@ -1,4 +1,5 @@
 // In Projects.js
+import Image from 'next/image'
 import React, { useEffect, useState } from 'react';
 import componentStyles from '../styles/module.css/components.module.css';
 
@@ -19,18 +20,13 @@ const Projects = ({theData}) => {
                     <div className={componentStyles.imgCont}>
                         {
                             project?.img &&(
-                                <Image src={project.img}/>
+                                <Image src={project.img} width={20} height={20}/>
                             )
                         }
+                        <hr/>
                     </div>
-                    <hr/>
                     <h2>
-                        {project?.name && (
-                            <>
-                                {project?.name}
-                                <i className="fa fa-arrow-right" />
-                            </>
-                        )}
+                        {project?.name && project?.name}
                     </h2>
                     <div>
                         <aside>
