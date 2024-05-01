@@ -8,7 +8,7 @@ const Projects = ({theData}) => {
 
     useEffect(() => {
         if (theData && !allProjects) {
-            setProjects(theData.huge.slice(0,4));
+            setProjects(theData.huge.slice(0,6));
         }
     }, [theData]);
 
