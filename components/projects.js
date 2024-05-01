@@ -1,5 +1,5 @@
 // In Projects.js
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import componentStyles from '../styles/module.css/components.module.css';
 
 const Projects = ({theData}) => {
@@ -16,6 +16,14 @@ const Projects = ({theData}) => {
             {(allProjects && allProjects.length > 0 ? allProjects : Array.from({ length: 4 })).map((project, index) => (
                 <a href={project?.host || null} className={`${componentStyles.card} ${componentStyles.project}`} target="_blank" rel="noopener noreferrer" key={index}>
                     <aside className={componentStyles[project?.status]}>{project?.status}</aside>
+                    <div className={componentStyles.imgCont}>
+                        {
+                            project?.img &&(
+                                <Image src={project.img}/>
+                            )
+                        }
+                    </div>
+                    <hr/>
                     <h2>
                         {project?.name && (
                             <>
@@ -24,7 +32,6 @@ const Projects = ({theData}) => {
                             </>
                         )}
                     </h2>
-                    <hr/>
                     <div>
                         <aside>
                             <p></p>
@@ -32,7 +39,12 @@ const Projects = ({theData}) => {
                     </div>
                     <div>{project?.summary}</div>
                     <div className={componentStyles.contri}>
-                        <i>{project?.collaborators && `Contributors: ${project.collaborators.length || 0}`}</i>
+                        {
+                            project?.languages && project?.languages?.length>0 && 
+                            project.languages.map((language, index)=>{
+                                <React.Fragment key={index}>{language}</React.Fragment>
+                            })
+                        }
                     </div>
                 </a>
             ))}

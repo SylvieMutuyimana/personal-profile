@@ -19,6 +19,11 @@
 .card.project{
   padding-top: 40px !important;
 }
+.card.project .imgCont{
+  width: 100;
+  height: 150px;
+  background-color: var(--00486B);
+}
 .card .contri{
   margin-top: 10px;
   color: #d8c2007c;

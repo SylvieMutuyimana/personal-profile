@@ -6,7 +6,8 @@
             "host": "https://scouts-org-front-end-beta.vercel.app/dashboard", "repository":"",
             "languages":["HTML", "CSS", "Next.js", "JavaScript"],
             "summary":"Admin site for Rwanda scouts organisation",
-            "status":"done"
+            "status":"done",
+            "img":"/projects/scouts.png"
         },
         {
             "id": "6239aacb-aeb0-4d58-a197-f099d8767bec", "name": "Kenya Housing Prediction Model",
@@ -14,15 +15,35 @@
             "host": "https://kenya-rentalprices.onrender.com/", "repository":"",
             "languages":["HTML", "CSS", "Flask", "Python", "JavaScript"],
             "summary":"A housing prediction model for citizens to find the best city for living",
-            "status":"done"
+            "status":"done",
+            "img":"/projects/kenya.png"
         },
         {
-            "id": "6239aacb-aeb0-4d58-a197-b099d8767bec", "name": "Share Ride",
+            "id": "6239aacb-aeb0-4d58-a197-b09t9d8767bec", "name": "Share Ride",
             "collaborators": ["Polie Vicia", "Adeline Tuyizere", "Diane Uwiduhaye"],
             "host": null, "repository":"",
-            "languages":["HTML", "CSS", "Django", "JavaScript"],
+            "languages":["HTML", "CSS", "Django", "Python"],
             "summary":"App that connects car owners and passengers",
-            "status":"done"
+            "status":"done",
+            "img":"/projects/share_ride.png"
+        },
+        {
+            "id": "6239aacb-aeb0-4d58-af97-f099d8767rtbec", "name": "ecoSWAP",
+            "collaborators": ["Adeline Tuyizere", "Diane Uwiduhaye"],
+            "host": null, "repository":"",
+            "languages":["React Native", "Next.js", "SCSS"],
+            "summary":"An e-commerce app that revolutionalises e-waste management in Rwanda ",
+            "status":"development",
+            "img":"/projects/fana.png"
+        },
+        {
+            "id": "6239aacb-aeb0-4d58-af97-f099d8767bec", "name": "Fana Iyawe UI",
+            "collaborators": ["Adeline Tuyizere", "Diane Uwiduhaye"],
+            "host": null, "repository":"",
+            "languages":["Figma"],
+            "summary":"Connect with other Rwanda team fans",
+            "status":"development",
+            "img":"/projects/fana.png"
         },
         {
             "id": "6239aacb-aeb0-4d58-a197-b099767bevfc", "name": "Personal Profile",
@@ -30,7 +51,8 @@
             "host": null, "repository":"",
             "languages":["HTML", "CSS","Flask", "JSON", "React"],
             "summary":"My Personal Profile showcasing my projects and skills",
-            "status":"development"
+            "status":"development",
+            "img":"/projects/profile.png"
         },
         {
             "id": "6239aacb-aeb0-4d58-a197-f099d8767bec", "name": "Fully Automated House Model",
@@ -39,14 +61,6 @@
             "languages":["C++"],
             "summary":"Full Automated House Model with security measures",
             "status":"done"
-        },
-        {
-            "id": "6239aacb-aeb0-4d58-af97-f099d8767bec", "name": "Fana Iyawe UI",
-            "collaborators": ["Adeline Tuyizere", "Diane Uwiduhaye"],
-            "host": null, "repository":"",
-            "languages":["Figma"],
-            "summary":"Connect with other Rwanda team fans",
-            "status":"development"
         },
         {
             "id": "6239aacb-aeb0-4d58-a197-f099d8767bec", "name": "SIHA Health App",
