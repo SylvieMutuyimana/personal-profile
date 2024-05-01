@@ -59,7 +59,7 @@
     ],
     "mini":[
         {
-            "id": "6239aacb-aeb0-4d58-a197-b099d8767bec", "name": "Membership App",
+            "id": "6239aacb-aeb0-4d58-a197-b099d8767bec", "name": "Windows Membership App",
             "collaborators": "",
             "host": null, "repository":"",
             "languages":["Java"],
@@ -67,15 +67,15 @@
             "status":"done"
         },
         {
-            "id": "6239aacb-aeb0-4d58-a197-b099d8767bec", "name": "a Membership App",
-            "collaborators": "",
+            "id": "6239aacb-aeb0-4d58-a197-f099d8gfg7bec", "name": "Biology Virtual Lab",
+            "collaborators": ["Polie Vicia", ""],
             "host": null, "repository":"",
-            "languages":["Python"],
-            "summary":"An organization membership tracking and registration app",
+            "languages":["Unity", "C#"],
+            "summary":"A virtual lab allowing students to learn biology through interraction with the virtual lab",
             "status":"done"
         },
         {
-            "id": "6239aacb-aeb0-4d58-a197-b099d8767bec", "name": "Banking Management System",
+            "id": "6239aacb-aeb0-4d58-a197-b099d8767bec", "name": "Financial Transaction Management System",
             "collaborators": "",
             "host": null, "repository":"",
             "languages":["Python"],
@@ -99,13 +99,13 @@
             "status":"done"
         },
         {
-            "id": "6239aacb-aeb0-4d58-a197-f099d8gfg7bec", "name": "Virtual Lab",
-            "collaborators": ["Polie Vicia", ""],
+            "id": "6239aacb-aeb0-4d58-a197-b099d8767bec", "name": "a Membership System",
+            "collaborators": "",
             "host": null, "repository":"",
-            "languages":["Unity", "C#"],
-            "summary":"A virtual lab allowing students to learn biology through interraction with the virtual lab",
+            "languages":["Python"],
+            "summary":"An organization membership tracking and registration tracker",
             "status":"done"
-        } 
+        }
     ],
     "client_projects":[
         {

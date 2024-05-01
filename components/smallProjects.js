@@ -1,13 +1,13 @@
-// In Projects.js
+// In smallProjects.js
 import { useEffect, useState } from 'react';
 import componentStyles from '../styles/module.css/components.module.css';
 
-const Projects = ({theData}) => {
+const SmallProjects = ({ theData }) => {
     const [allProjects, setProjects] = useState(null);
 
     useEffect(() => {
         if (theData && !allProjects) {
-            setProjects(theData.huge.slice(0,4));
+            setProjects(theData.mini.slice(0,4));
         }
     }, [theData]);
 
@@ -23,7 +23,7 @@ const Projects = ({theData}) => {
                                 <i className="fa fa-arrow-right" />
                             </>
                         )}
-                    </h2>
+                    </h2>                    
                     <hr/>
                     <div>
                         <aside>
@@ -40,4 +40,4 @@ const Projects = ({theData}) => {
     );
 };
 
-export default Projects;
+export default SmallProjects;

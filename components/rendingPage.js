@@ -2,32 +2,9 @@ import Image from 'next/image'
 import styles from '../styles/module.css/dashboard.module.css'
 import { useState, useEffect } from 'react';
 
-const rendingPage = () => {
+const rendingPage = (myAbout, myQuotes) => {
   const [visible, setVisible] = useState(true);
   const [quoteIndex, setQuoteIndex] = useState(0);
-  const  myQuotes = [
-    {
-        "_id":"45445", "author":"Beyonce",
-        "quote": "Do what you were born to do you have to trust yourself"
-    },
-    {
-      "_id":"dfd", "author":"Dale Carnegie",
-      "quote":"Remember, today is the tomorrow you worried about yesterday."
-    },
-    {
-        "_id":"vdf", "author":"Stan Lee",
-        "quote": "With great power comes great responsibility."
-    },    {
-        "_id":"gvfc", "author":"John Lennon",
-        "quote": "Everything will be okay in the end. If it's not okay, it's not the end."
-    }
-  ]
-  const myAbout = {
-    "intro": "I am Sylvie Mutuyimana, a Junior Full Stack Developer and aspiring computer engineer.  I have a passion for developing business-driving software solutions and enjoy working on frontend-focused projects. With a strong foundation in Python frameworks, JavaScript, and PHP, I strive to create high-quality and responsive web applications.",
-    "email":"mutuyimanasylvie@gmail.com",
-    "role":"Web designer and junior full-stack developer",
-    "role_expl": "Crafting Web Alchemy with Cutting-Edge Tools and AI, Infused with VR and Blockchain Exploration"
-  }
   useEffect(() => {
     setVisible(true)
     const intervalId = setInterval(() => {
@@ -47,7 +24,10 @@ const rendingPage = () => {
           <article style={styles.front}>
             <div className={styles.heading}>
               <h2>
-              Sylvie is a <b>web designer </b> and <b>junior full-stack developer</b>
+                Sylvie is a 
+                <b> {myAbout && myAbout.role && myAbout.role.split(' and ')[0]} </b>
+                and
+                <b> {myAbout && myAbout.role &&myAbout.role.split(' and ')[1]}</b>
               </h2>
             </div>
             <div className={styles.subheading}>

@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import styles from '../styles/module.css/header.module.css'
 import { page_links } from './page_links';
 import { useRouter } from 'next/router';
@@ -11,8 +10,8 @@ const Header = () => {
     </article>
     <aside>
       {
-        page_links.map((page,index)=>(
-          <a href={'#contact'} className={pathname === page.link ? styles.active : ''}>
+        page_links.map((page, index)=>(
+          <a href={page.link} className={pathname === page.link ? styles.active : ''} key={index}>
             {page.name}
           </a>
         ))

@@ -5,26 +5,16 @@ import { backendLinks, backend_url } from '@/components/constants';
 import { useEffect, useState } from 'react';
 
 function App({ Component, pageProps }) {
-    const [fetchError, setFetchError] = useState(false);
-    const [myProjects, setProjects] = useState(null);
+    const [allProjects, setProjects] = useState(null);
     const [mySkills, setSkills] = useState(null);
     const [myAbout, setAbout] = useState(null);
     const [myQuotes, setQuotes] = useState(null);
 
-    const testBackend = async () => {
-        try {
-            const response = await fetch(`${backend_url}`);
-            console.log(`Successfully connected to ${backend_url} endpoint`);
-            setFetchError(false);
-        } catch (error) {
-            console.log("Error connecting to dataset: ", error);
-            setFetchError(true);
-        }
-    };
-
     const fetchData = async (name, endpoint) => {
+        const the_route = backend_url + endpoint
         try {
-            const response = await fetch(`${backend_url}/${endpoint}`);
+            const response = await fetch(the_route);
+            console.log('Successfully fetched for ', name, 'on: ', the_route);
             if (response.ok) {
                 const data = await response.json();
                 if (name === 'about') {
@@ -36,42 +26,32 @@ function App({ Component, pageProps }) {
                 } else if (name === 'quotes') {
                     setQuotes(data);
                 }
-                setFetchError(false);
             } else {
                 console.log(`Error fetching data from ${endpoint}: ${response.status}`);
             }
         } catch (error) {
             console.log(`Error connecting to dataset: ${error}`);
-            setFetchError(true);
         }
     };
 
     const checkpoint = {
-        'about': myAbout, 'skills': mySkills, 'quotes': myQuotes, 'projects': myProjects
+        'about': myAbout, 'skills': mySkills, 'quotes': myQuotes, 'projects': allProjects
     };
 
     useEffect(() => {
-        testBackend();
-    }, []);
-
-    useEffect(() => {
-        if (!fetchError) {
-            backendLinks.forEach((theLink) => {
-                if (!checkpoint[theLink.name]) {
-                    console.log('Fetching for', theLink.name);
-                    fetchData(theLink.name, theLink.link);
-                }
-            });
-        }
-    }, [fetchError]);
+        backendLinks.forEach((theLink) => {
+            if (!checkpoint[theLink.name]) {
+                fetchData(theLink.name, theLink.link);
+            }
+        });
+    });
 
     return (
         <RootLayout>
             <div className={styles.page}>
                 <Component
                     {...pageProps}
-                    fetchError={fetchError}
-                    myProjects={myProjects}
+                    allProjects={allProjects}
                     myAbout={myAbout}
                     myQuotes={myQuotes}
                     mySkills={mySkills}
