@@ -28,6 +28,14 @@ def projectTypeData_Route(projectType):
         return jsonify({"message": "No data found for projectType '{}'".format(projectType)})
     return jsonify(project_data)
 
-
+@app.route('/projects/<projectType>', methods=['POST'])
+def addNewProject(projectType, data):
+    try:
+        all_projects = projectsTypeData(projectType)
+        project_data = data
+        all_projects.append(project_data)
+        return jsonify({"message": "Project added successfully"})
+    except:
+        return jsonify({"message": "Error adding the project"})
 if __name__ == '__main__':
     app.run()

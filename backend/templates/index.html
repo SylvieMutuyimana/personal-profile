@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>MY API!</title>
+  </head>
+  <body>
+	<section>
+		<h1>Welcome to MY API!</h1>
+		<div class="selection">
+		<article>
+			<table>
+				<thead></thead>
+				<tbody>
+					<tr>
+						<td><a href='/about'>About</a></td>
+						<td id="change_about"><a href='/about'>Change about</a></td>
+					</tr>
+					<tr>
+						<td><a href='/quotes'>My quotes</a></td>
+						<td id="add_quote"><a href='/quotes'>Add new quote + </a></td>
+					</tr>
+					<tr>
+						<td><a href='/skills'>My skills</a></td>
+						<td id="add_skill"><a href='/skills'>Add new skill + </a></td>
+					</tr>
+					<tr>
+						<td><a href='/projects'>My projects</a></td>
+						<td id="add_project"><a href='/projects'>Add new project + </a></td>
+					</tr>
+				</tbody>
+			</table> 
+		</article>
+		<aside>
+			<form method="post">
+				<p>Fill in the details for your ideal new item</p>
+
+				<button type="submit">Add</button><br>
+			</form>
+		</aside>
+	    </div>
+
+	</section>
+    
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+	<script>
+
+	</script>
+  </body>
+</html>

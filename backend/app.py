@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask_cors import CORS
 from api.about import aboutMe_Route, aboutMe_DetailsRoute
 from api.quotes import allquotesData, quoteRoute
@@ -11,13 +11,7 @@ CORS(app, resources={r"/*": {"origins": "*"}})  # Allow CORS for all routes and 
 # Define route for root URL
 @app.route("/", methods=["GET"])
 def root():
-    return (    
-        "Welcome to the API! <br>"
-        "Visit <a href='/about'>/about</a> to get all about.<br>"
-        "Visit <a href='/quotes'>/quotes</a> to get all quotes.<br>"
-        "Visit <a href='/skills'>/skills</a> to get all skills.<br>"
-        "Visit <a href='/projects'>/projects</a> to get all projects.<br>"
-    )
+    return render_template('index.html')
 
 # About routes
 app.add_url_rule('/about', 'get_prices', aboutMe_Route, methods=['GET'])
