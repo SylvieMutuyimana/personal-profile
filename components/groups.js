@@ -1,4 +1,3 @@
-// In ReturnGroup.js
 import componentStyles from '../styles/module.css/components.module.css';
 
 const ReturnGroup = ({name, DynamicComponent, theData, expandedSection, changeExpanded }) => {
