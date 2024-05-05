@@ -1,10 +1,10 @@
 // In Projects.js
 import componentStyles from '../styles/module.css/components.module.css';
 
-const Skills = ({theData}) => {
+const Skills = ({theData, name, expandedSection }) => {
     const returnData = ()=>{
       if(theData&&Object.keys(theData).length > 0){
-        return theData
+        return name===expandedSection? theData: Object.fromEntries(Object.entries(theData).slice(0, 4));
       }else{
         return {
           "databases": [], "frameworks": [],

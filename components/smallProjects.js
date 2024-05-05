@@ -2,14 +2,19 @@
 import { useEffect, useState } from 'react';
 import componentStyles from '../styles/module.css/components.module.css';
 
-const SmallProjects = ({ theData }) => {
+const SmallProjects = ({ theData, name, expandedSection }) => {
     const [allProjects, setProjects] = useState(null);
-
+    
     useEffect(() => {
         if (theData && !allProjects) {
-            setProjects(theData.mini.slice(0,4));
+            if(name===expandedSection){
+                console.log('name: ', name)
+                setProjects(theData);
+            }else{
+                setProjects(theData.mini.slice(0,4));
+            }
         }
-    }, [theData]);
+    }, [theData, expandedSection]);
 
     return (
         <div className={componentStyles.grid}>

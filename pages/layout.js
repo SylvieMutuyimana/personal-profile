@@ -32,12 +32,12 @@ export default function RootLayout({ children }) {
         <div className={styles.squaresContainer}>
           {
             Array.from({length:9}).map((_, index)=>(
-              <div className={`${styles.square} ${styles[`square${index}`]}`} style={{animationDuration: `${item_anim(index)}s`}}></div>
+              <div key={index} className={`${styles.square} ${styles[`square${index}`]}`} style={{animationDuration: `${item_anim(index)}s`}}></div>
             ))
           }
           {
             Array.from({length:9}).map((_, index)=>(
-              <div className={`${styles.rect} ${styles[`rect${index}`]}`} style={{animationDuration: `${item_anim(index)}s`}}></div>
+              <div key={index} className={`${styles.rect} ${styles[`rect${index}`]}`} style={{animationDuration: `${item_anim(index)}s`}}></div>
             ))
           }
         </div>
