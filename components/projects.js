@@ -14,7 +14,6 @@ const Projects = ({theData, name, expandedSection }) => {
         }
     },[expandedSection, theData])
 
-
     return (
         <div className={componentStyles.grid}>
             {(allProjects && allProjects.length > 0 ? allProjects : Array.from({ length: 4 })).map((project, index) => (
