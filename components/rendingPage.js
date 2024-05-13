@@ -2,7 +2,7 @@ import Image from 'next/image'
 import styles from '../styles/module.css/dashboard.module.css'
 import { useState, useEffect } from 'react';
 
-const rendingPage = (myAbout, myQuotes) => {
+const RendingPage = ({myAbout, myQuotes}) => {
   const [visible, setVisible] = useState(true);
   const [quoteIndex, setQuoteIndex] = useState(0);
   useEffect(() => {
@@ -52,4 +52,4 @@ const rendingPage = (myAbout, myQuotes) => {
     )
 };
 
-export default rendingPage;
+export default RendingPage;

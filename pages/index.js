@@ -1,6 +1,6 @@
 import ReturnGroup from '@/components/groups';
 import Projects from '@/components/projects';
-import rendingPage from '@/components/rendingPage';
+import RendingPage from '@/components/rendingPage';
 import Skills from '@/components/skills';
 import SmallProjects from '@/components/smallProjects';
 import { useState } from 'react';
@@ -17,7 +17,7 @@ const Index = ({allProjects, myAbout, myQuotes, mySkills}) => {
   return (
     <div>
       <div id='#home'>
-        {rendingPage(myAbout, myQuotes)}
+        <RendingPage myAbout={myAbout} myQuotes={myQuotes}/>
       </div> 
       <div id='#projects'>
         <ReturnGroup name={'PROJECTS'} DynamicComponent={Projects} theData={allProjects} expandedSection={expandedSection} changeExpanded={changeExpanded}/>

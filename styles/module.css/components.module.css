@@ -25,9 +25,10 @@
   /*background-color: var(--00486B);*/
   overflow: hidden;
 }
-.card.project .imgCont img{
-  width: 100% !important;
-  height: auto !important;
+
+.card.project .imgCont .projectImage{
+  height: 150px !important;
+  width: auto !important;
   background-color: var(--00486B);
 }
 .card .contri{

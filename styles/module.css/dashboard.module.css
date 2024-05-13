@@ -40,6 +40,24 @@
   width: 80% !important;
   margin-left: -05%;
 }
+
+
+.loader{
+  text-align: center;
+  padding: 1em;
+  margin: 0 auto 1em;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/*
+  Set the color of the icon
+*/
+.loader svg path, .loader svg rect{
+  fill: #ff660053;
+}
+
+
 /* Define the styles for the visible state */
 .quoteVisible {
   opacity: 1;

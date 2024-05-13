@@ -36,8 +36,10 @@ const Projects = ({theData, name, expandedSection }) => {
                     <aside className={componentStyles[project?.status]}>{project?.status}</aside>
                     <div className={componentStyles.imgCont}>
                         {
-                            project?.img &&(
-                                <Image src={project.img} width={20} height={20}/>
+                            project?.img ?(
+                                <Image src={project.img} width={20} height={20} className={componentStyles.projectImage}/>
+                            ):(
+                                <div className={componentStyles.projectImage} />
                             )
                         }
                         <hr/>
