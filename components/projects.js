@@ -6,28 +6,14 @@ import componentStyles from '../styles/module.css/components.module.css';
 const Projects = ({theData, name, expandedSection }) => {
     const [allProjects, setProjects] = useState(null);
 
-    useEffect(() => {
-        if(name===expandedSection){
-            if (theData && !allProjects) {
-                if(name===expandedSection){
-                    console.log('name: ', name)
-                    setProjects(theData);
-                }else{
-                    setProjects(theData.mini.slice(0,4));
-                }
-            }
-        }else{
-            if (theData && !allProjects) {
-                if(name===expandedSection){
-                    console.log('name: ', name)
-                    setProjects(theData);
-                }else{
-                    setProjects(theData.mini.slice(0,4));
-                }
-            }
+    useEffect(()=>{
+        if(name===expandedSection && theData && theData.huge) {
+            setProjects(theData.huge)
+        }else if (name!==expandedSection && theData && theData.huge){
+            setProjects(theData.huge.slice(0,4))
         }
+    },[expandedSection, theData])
 
-    }, [theData, expandedSection]);
 
     return (
         <div className={componentStyles.grid}>
