@@ -26,8 +26,8 @@ export const BackgroundWave = () => {
             <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(81, 216, 234, 0.8)" />
 
             </g>
-        </svg>
-      </div>
+
+            </div>
     </div>
   );
 };
