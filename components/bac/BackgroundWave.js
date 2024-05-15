@@ -24,8 +24,8 @@ export const BackgroundWave = () => {
             <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
             <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(81, 216, 234, 0.4)" />
             <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(81, 216, 234, 0.8)" />
-            <use xlink:href="#gentle-wave" x="48" y="7" fill="#51EAEA" />
-          </g>
+
+            </g>
         </svg>
       </div>
     </div>
