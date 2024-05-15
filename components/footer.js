@@ -1,40 +1,28 @@
-import Image from 'next/image'
 import styles from '../styles/module.css/footer.module.css'
-import componentStyles from '../styles/module.css/components.module.css';
-
+import { page_links } from './page_links';
+import { useRouter } from 'next/router';
 const Footer = () => {
+  const {pathname} = useRouter()
   return (
-    <div className={styles.footer} id={styles.contact}>    
-        <div className={componentStyles.group}>
-          <div className={componentStyles.head}>
-              <article>
-                  <span>CONTACT</span>
-                  <div className={componentStyles.line} />
-              </article>
-              <aside>
-              </aside>
-          </div>
-          <div className={`${styles.paper} ${styles.alt}`}>
-            <h4>Reach out via</h4>
-            <p>
-              email: <a href= {`mailto:mutuyimanasylvie@gmail.com`}>
-              mutuyimanasylvie@gmail.com</a>
-            </p>
-            <p>
-              Whatsapp: <a href= {`https://wa.me/0786405038`}>
-              redirect</a>
-            </p>     
-            <p>
-              Telegram: <a href= {`https://t.me/the_bold_woman`}>
-              Bold Woman</a>
-            </p>     
-            <p>
-              Linkedin: <a href= {'https://www.linkedin.com/in/sylvie-mutuyimana-226233184/'}>
-              Sylvie Mutuyimana</a>
-            </p>        
-          </div>
-      </div>
-    </div>
+    <nav className={styles.nav}>
+    <article>
+        <span>
+          Copyright © 2024, 
+        </span>
+        <i className={styles.active}>
+        Sylvie Mutuyimana. 
+       </i>
+       <span className={styles.active}>
+      All Rights Reserved
+      </span>
+      </article>
+    <aside>
+
+      <code className={styles.resume}>My Resume</code>
+
+    </aside>
+
+</nav>
 
   );
 };

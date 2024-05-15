@@ -1,8 +1,11 @@
 // RootLayout.js
 import Header from '@/components/header';
-import Footer from '@/components/footer';
+import Contact from '@/components/contact';
 import Head from 'next/head';
 import styles from '../styles/module.css/layout.module.css';
+import componentStyles from '../styles/module.css/layout_components.module.css';
+import Footer from '@/components/footer';
+import { BackgroundWave } from '@/components/bac/BackgroundWave';
 
 export default function RootLayout({ children }) {
   const item_anim = (index)=> {
@@ -26,20 +29,26 @@ export default function RootLayout({ children }) {
           </div>
           <div className={styles.content}>
             {children}
+            <Contact/>
+          </div>
+          <div className={styles.footer}>
             <Footer/>
           </div>
         </div>
-        <div className={styles.squaresContainer}>
+        <div className={componentStyles.squaresContainer}>
           {
             Array.from({length:9}).map((_, index)=>(
-              <div key={index} className={`${styles.square} ${styles[`square${index}`]}`} style={{animationDuration: `${item_anim(index)}s`}}></div>
+              <div key={index} className={`${componentStyles.square} ${componentStyles[`square${index}`]}`} style={{animationDuration: `${item_anim(index)}s`}}></div>
             ))
           }
           {
             Array.from({length:9}).map((_, index)=>(
-              <div key={index} className={`${styles.rect} ${styles[`rect${index}`]}`} style={{animationDuration: `${item_anim(index)}s`}}></div>
+              <div key={index} className={`${componentStyles.rect} ${componentStyles[`rect${index}`]}`} style={{animationDuration: `${item_anim(index)}s`}}></div>
             ))
           }
+        </div>
+        <div className={componentStyles.backgroundWave}>
+          <BackgroundWave />
         </div>
       </div>
     </>
