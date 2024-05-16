@@ -1,4 +1,4 @@
-export const backend_url = "https://profile-uzcd.onrender.com/"
+export const backend_url = "https://backend-sylvie.onrender.com/"
 
 export const backendLinks = [
     {name:'about', link:'about'},

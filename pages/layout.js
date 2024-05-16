@@ -5,7 +5,6 @@ import Head from 'next/head';
 import styles from '../styles/module.css/layout.module.css';
 import componentStyles from '../styles/module.css/layout_components.module.css';
 import Footer from '@/components/footer';
-import { BackgroundWave } from '@/components/bac/BackgroundWave';
 
 export default function RootLayout({ children }) {
   const item_anim = (index)=> {
@@ -48,7 +47,6 @@ export default function RootLayout({ children }) {
           }
         </div>
         <div className={componentStyles.backgroundWave}>
-          <BackgroundWave />
         </div>
       </div>
     </>
