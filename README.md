@@ -1,11 +1,10 @@
-```
 # Personal Profile
 
 This project is a personal profile system implemented with Next.js for the frontend and Python Flask for the backend. The backend also includes a website for updating data.
 
 ## Project Structure
 
-```
+
 personal-profile/
 | - backend/
 | | - api/            # Contains API endpoints
@@ -23,7 +22,6 @@ personal-profile/
 | - styles/           # CSS styles
 | | - css/            # Global CSS
 | | - module.css/     # CSS modules
-```
 
 ## Backend
 
