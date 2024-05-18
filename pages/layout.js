@@ -1,6 +1,5 @@
 // RootLayout.js
 import Header from '@/components/header';
-import Contact from '@/components/contact';
 import Head from 'next/head';
 import styles from '../styles/module.css/layout.module.css';
 import componentStyles from '../styles/module.css/layout_components.module.css';
@@ -28,7 +27,6 @@ export default function RootLayout({ children }) {
           </div>
           <div className={styles.content}>
             {children}
-            <Contact/>
           </div>
           <div className={styles.footer}>
             <Footer/>

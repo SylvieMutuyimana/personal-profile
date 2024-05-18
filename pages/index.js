@@ -1,3 +1,4 @@
+import Contact from '@/components/contact';
 import ReturnGroup from '@/components/groups';
 import Projects from '@/components/projects';
 import RendingPage from '@/components/rendingPage';
@@ -16,18 +17,21 @@ const Index = ({allProjects, myAbout, myQuotes, mySkills}) => {
   console.log('expandedSection: ', expandedSection)
   return (
     <div>
-      <div id='#home'>
+      <div id='home'>
         <RendingPage myAbout={myAbout} myQuotes={myQuotes}/>
       </div> 
-      <div id='#projects'>
+      <div id='projects'>
         <ReturnGroup name={'PROJECTS'} DynamicComponent={Projects} theData={allProjects} expandedSection={expandedSection} changeExpanded={changeExpanded}/>
       </div>
-      <div id='#smallprojects'>
+      <div id='smallprojects'>
         <ReturnGroup name={'MINI APPS'} DynamicComponent={SmallProjects} theData={allProjects} expandedSection={expandedSection} changeExpanded={changeExpanded}/>
       </div>    
-      <div id='#skills'>
+      <div id='skills'>
         <ReturnGroup name={'SKILLS'} DynamicComponent={Skills} theData={mySkills} expandedSection={expandedSection} changeExpanded={changeExpanded}/>
       </div>
+      <div id='contact'>
+        <Contact/>
+      </div> 
     </div>
   );
 };

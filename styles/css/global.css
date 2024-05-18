@@ -17,7 +17,8 @@
   --actual_yellow:#d9c301 ;
   --00486B:#dfd36eab ;
   --yellow: #01afff; 
-  --light_yellow: #80b5ce49; 
+  --light_yellow: #80b5ced5; 
+  --dark: rgb(0, 0, 15); 
   --borderRadius:7px;
   --green: #01a001be;
 }
@@ -37,16 +38,12 @@ body {
   'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
   'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;;
   font-family: 'Brush Script MT', cursive;
+  
 }
 
 body {
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background_end_rgb))
-    )
-    rgb(var(--background_start_rgb));
-}
+  background-color: var(--dark);
+  }
 p{
   font-size: 16px;
 }

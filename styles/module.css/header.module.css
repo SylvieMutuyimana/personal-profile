@@ -1,29 +1,71 @@
 .nav{
   width: 100%;
+  height: 100%;
+}
+.nav article, .nav aside{
+  padding: 10px 10px ;
 }
 .nav article{
   width: 30%;
   font-weight:bolder;
-  font-size:30px;
   padding-left: 5%;
 }
 .nav .author{
   color: var(--actual_yellow);
   box-shadow: 0px 1px var(--yellow);
+  font-family: Satisfy, cursive;
+  text-shadow: 0.02em 0.02em 0 var(--yellow), 0 0 0.5em var(--actual_yellow);
+  font-size:20px;
+}
+.nav .author a{
+  font-size: 25px;
 }
 .nav aside{
   width: 70%;
   text-align: right !important;
+
 }
+
 .nav aside a {
-  margin-right: 15px !important;
+  margin-right: 10px !important;
+  font-weight: bold;
+  padding: 13px 10px ;
+  color:rgba(255, 240, 190, 0.897);
+  background-image: linear-gradient(to right bottom,
+  var(--actual_yellow), var(--yellow), 
+  #190072, #001f4b, 
+  #12eb5e8c);
+clip-path: polygon(64% 0%, 83% 12%, 100% 8%, 
+94% 78%, 77% 79%, 32% 100%, 
+78% 708%, 0% 43%, 17% 12%);
 }
 .nav a:hover{
-  color:var(--yellow);
-  font-size: large;
-}
+  background-image: linear-gradient(to right bottom, 
+  #0d003a,  #12eb5e8c
+    );
+  clip-path: polygon(64% 0%, 83% 12%, 100% 8%, 
+  94% 78%, 77% 79%, 32% 100%, 
+  78% 708%, 0% 43%, 17% 12%);
+  color:greenyellow
+  }
 .nav a.active{
-  color:var(--actual_yellow);
-  text-decoration:dashed;
-  font-weight: bold;
+  background-image: linear-gradient(to right bottom, 
+  #0d003a,  #12eb5e8c
+    );
+  clip-path: polygon(64% 0%, 83% 12%, 100% 8%, 
+  94% 78%, 77% 79%, 32% 100%, 
+  78% 708%, 0% 43%, 17% 12%);
+  color:greenyellow;
+  
+}
+.nav .author a:hover{
+  color: violet;
+  box-shadow: 0px 1px Brown;
+  text-shadow: 0.02em 0.02em 0 var(--yellow), 0 0 0.5em var(--actual_yellow);
+  background-image: linear-gradient(to right bottom, 
+    #12eb5e8c, #0d003a
+    );
+  clip-path: polygon(48% 3%, 83% 12%, 100% 8%, 
+  178% 78%, 77% 789%, 56% 100%, 
+  78% 708%, 0% 0%, 17% 12%);
 }
