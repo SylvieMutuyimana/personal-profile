@@ -1,4 +1,3 @@
-// RootLayout.js
 import Header from '@/components/header';
 import Contact from '@/components/contact';
 import Head from 'next/head';
