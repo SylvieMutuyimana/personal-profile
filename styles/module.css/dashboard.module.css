@@ -16,7 +16,6 @@
 }
 
 .rendingPage::before {
-  border-radius: 50%;
   width: 480px;
   margin-left: -400px;
 }
