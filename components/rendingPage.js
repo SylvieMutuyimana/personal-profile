@@ -34,7 +34,7 @@ const RendingPage = ({myAbout, myQuotes}) => {
               {myAbout && myAbout.role_expl && myAbout.role_expl}
             </div>
             <div className={styles.contact}>
-              <a href={`mailto:${myAbout && myAbout.email? myAbout.email : ''}`}>
+              <a href="#contact">
                 Contact me !!
               </a> 
             </div>

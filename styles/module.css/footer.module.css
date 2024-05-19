@@ -1,0 +1,29 @@
+.nav{
+  width: 100%;
+  }
+.nav article{
+  width: 60%;
+  margin-left: 2%;
+}
+.nav .resume{
+  color: var(--actual_yellow);
+  border: 1px 1px solid var(--actual_yellow);
+  background-color: rgba(0, 255, 255, 0.439);
+  padding: 4px 8px; 
+  border-radius: 20px;
+}
+.nav aside{
+  width: 30%;
+  margin-right: 2%;
+  text-align: right !important;
+  font-weight:bolder;
+  font-size:20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.nav .resume:hover {
+  color:var(--yellow);
+  background-color:var(--actual_yellow);
+  font-size: large;
+  cursor: pointer;
+}

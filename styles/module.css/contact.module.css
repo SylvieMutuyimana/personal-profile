@@ -49,6 +49,6 @@
     color: black;
     margin-top: 2px;
   }
-  .paper p:hover{
+  .paper a:hover{
     color: #004466;
   }

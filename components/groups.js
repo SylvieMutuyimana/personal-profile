@@ -10,9 +10,13 @@ const ReturnGroup = ({name, DynamicComponent, theData, expandedSection, changeEx
                     <div className={componentStyles.line} />
                 </article>
                 <aside>
-                    <i onClick={()=>changeExpanded(name)}>
-                        view all <span>-&gt;</span>
-                    </i>
+                    {
+                        name!=='ABOUT' &&(
+                            <i onClick={()=>changeExpanded(name)}>
+                                view all <span>-&gt;</span>
+                            </i>
+                        )
+                    }
                 </aside>
             </div>
             <DynamicComponent name={name} theData={theData} expandedSection={expandedSection}/>

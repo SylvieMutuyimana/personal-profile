@@ -7,6 +7,9 @@
   font-family: 'Brush Script MT', cursive;
 }
 
+.grid.nogrid{
+  display: block;
+}
 .card {
   padding: 1rem 1.2rem;
   border-radius: var(--borderRadius);

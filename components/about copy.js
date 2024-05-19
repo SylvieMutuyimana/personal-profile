@@ -1,48 +1,44 @@
-// In Projects.js
 import React from 'react';
-import componentStyles from '../styles/module.css/components.module.css';
 import styles from '../styles/module.css/about.module.css';
 
-const Projects = ({theData}) => {
-    return (
-      <div className={`${componentStyles.grid} ${componentStyles.nogrid}`}>
-        <section id="Bio" className={styles.about}>
+const BioSection = ({theData}) => {
+  
+  return (
+    <section id="Bio" className={styles.about}>
         <article>
-          <img src="/iiii.png" loading="lazy" alt="I" width={"200px"}/>
+          <img src="/iiii.png" loading="lazy" alt="I"/>
         </article>
         <aside>
+          <h2>About Sylvie?</h2>
           <p>
             {
               theData && theData.intro &&(
                 <>
                   Sylvie is a {' '}
-                  <span className={styles.textspan}>
+                  <span className={styles['textspan']}>
                     Full Stack Developer
                   </span>
                   {', '}
-                  <span className={styles.textspan}> 
+                  <span className={styles['ttextspan']}> 
                     UI/UX
                   </span>
-                  {' '}and{' '}
-                  <span className={styles.textspan}> 
+                  and
+                  <span className={styles['textspan']}> 
                     Web Designer
                   </span>
-                  .<br />‍<br />
                   {theData.intro && theData.intro.split('. ')[0]}
                   <br />‍<br />
                   {theData.intro && theData.intro.split('. ')[1]}
-                  <br />‍<br />
                 </>
               )
             }
           </p>
           <a href="#contact" className={styles.link}>
-            Get in touch &gt;
+            get in touch &gt;
           </a>
         </aside>
     </section>
-        </div>
-    );
+  );
 };
 
-export default Projects;
+export default BioSection;

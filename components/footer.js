@@ -6,15 +6,15 @@ const Footer = () => {
       <span>
         Copyright © 2024, &nbsp;
       </span>
-      <i className={styles.active}>
+      <i>
         Sylvie Mutuyimana.  &nbsp;
       </i>
-      <span className={styles.active}>
+      <span>
         All Rights Reserved
       </span>
       </article>
     <aside>
-      <code className={styles.resume}>Download Resume</code>
+      <code className={styles.resume}><a href='https://drive.google.com/file/d/1Edp1S-L8DsrXyUZ1VqkWwPgXgdmJmiO9/view?usp=sharing'>Download Resume</a></code>
     </aside>
 
 </nav>
