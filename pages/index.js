@@ -1,3 +1,4 @@
+import BioSection from '@/components/about';
 import Contact from '@/components/contact';
 import ReturnGroup from '@/components/groups';
 import Projects from '@/components/projects';
@@ -20,6 +21,9 @@ const Index = ({allProjects, myAbout, myQuotes, mySkills}) => {
       <div id='home'>
         <RendingPage myAbout={myAbout} myQuotes={myQuotes}/>
       </div> 
+      <div id='about'>
+        <BioSection myAbout={myAbout} />
+      </div>
       <div id='projects'>
         <ReturnGroup name={'PROJECTS'} DynamicComponent={Projects} theData={allProjects} expandedSection={expandedSection} changeExpanded={changeExpanded}/>
       </div>

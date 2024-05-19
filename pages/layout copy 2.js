@@ -4,6 +4,7 @@ import Head from 'next/head';
 import styles from '../styles/module.css/layout.module.css';
 import componentStyles from '../styles/module.css/layout_components.module.css';
 import Footer from '@/components/footer';
+import { Back_drop } from './Back_drop';
 
 export default function RootLayout({ children }) {
   const item_anim = (index)=> {
@@ -33,6 +34,7 @@ export default function RootLayout({ children }) {
           </div>
         </div>
         <div className={componentStyles.squaresContainer}>
+          <Back_drop/>
           {
             Array.from({length:9}).map((_, index)=>(
               <div key={index} className={`${componentStyles.square} ${componentStyles[`square${index}`]}`} style={{animationDuration: `${item_anim(index)}s`}}></div>
@@ -43,8 +45,6 @@ export default function RootLayout({ children }) {
               <div key={index} className={`${componentStyles.rect} ${componentStyles[`rect${index}`]}`} style={{animationDuration: `${item_anim(index)}s`}}></div>
             ))
           }
-        </div>
-        <div className={componentStyles.backgroundWave}>
         </div>
       </div>
     </>

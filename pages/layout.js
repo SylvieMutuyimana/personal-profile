@@ -34,7 +34,6 @@ export default function RootLayout({ children }) {
           </div>
         </div>
         <div className={componentStyles.squaresContainer}>
-          <Back_drop/>
           {
             Array.from({length:9}).map((_, index)=>(
               <div key={index} className={`${componentStyles.square} ${componentStyles[`square${index}`]}`} style={{animationDuration: `${item_anim(index)}s`}}></div>
