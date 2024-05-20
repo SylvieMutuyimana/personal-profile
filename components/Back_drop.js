@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-export const Back_drop =() => {
+const Back_drop =() => {
   useEffect(() => {
     const ROWS = 100;
     const COLS = 300;
@@ -102,3 +102,5 @@ export const Back_drop =() => {
       </span>
   );
 }
+
+export default Back_drop
