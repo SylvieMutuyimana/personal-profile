@@ -25,9 +25,10 @@ const RendingPage = ({myAbout, myQuotes}) => {
             <div className={styles.heading}>
               <h2>
                 Sylvie is a 
-                <b> {myAbout && myAbout.role && myAbout.role.split(' and ')[0]} </b>
+                <b> Full Stack Developer</b>,
+                <b> UI/UX </b>
                 and
-                <b> {myAbout && myAbout.role &&myAbout.role.split(' and ')[1]}</b>
+                <b> Web Designer </b>
               </h2>
             </div>
             <div className={styles.subheading}>
@@ -41,7 +42,7 @@ const RendingPage = ({myAbout, myQuotes}) => {
           </article>
           <aside className={styles.aside}>
             <Image className={styles.me} src="/me.png"
-            alt="I" width={400} height={500} priority/>
+              alt="I" width={400} height={600} priority/>
           </aside>
         </div>
         <div className={styles.quoteCont}>

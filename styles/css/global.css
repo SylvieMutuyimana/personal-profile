@@ -22,6 +22,11 @@
   --borderRadius:7px;
   --green: #01a001be;
   --blue: rgb(1, 1, 85); 
+
+  --card_back: #2a4d5254;
+
+  --card_back: rgba(0, 0, 34, 0.384);
+
 }
 
 

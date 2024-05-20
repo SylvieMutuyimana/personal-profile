@@ -22,9 +22,9 @@ const Projects = ({theData, name, expandedSection }) => {
                     <div className={componentStyles.imgCont}>
                         {
                             project?.img ?(
-                                <Image src={project.img} width={20} height={20} className={componentStyles.projectImage}/>
+                                <Image src={project.img} width={40} height={40} className={componentStyles.projectImage}/>
                             ):(
-                                <div className={componentStyles.projectImage} />
+                                <div className={`${componentStyles.projectImage} ${componentStyles.noImg}`} />
                             )
                         }
                         <hr/>

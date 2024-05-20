@@ -3,7 +3,7 @@
   height: 400px;
   display: flex;
   align-items: center;
-  background-color: #f4f4f42f;
+  background-color: var(--card_back);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -56,7 +56,7 @@
 
 .link {
   text-decoration: none;
-  color: var(--blue);
+  color:  #2abcff;
   font-weight: bold;
   font-size: 18px;
 }

@@ -22,7 +22,6 @@ const SmallProjects = ({ theData, name, expandedSection }) => {
                         {project?.name && (
                             <>
                                 {project?.name}
-                                <i className="fa fa-arrow-right" />
                             </>
                         )}
                     </h2>                    

@@ -13,7 +13,7 @@
   border-radius: 20px;
 }
 .nav aside{
-  width: 30%;
+  width: 20%;
   margin-right: 2%;
   text-align: right !important;
   font-weight:bolder;
@@ -26,4 +26,26 @@
   background-color:var(--actual_yellow);
   font-size: large;
   cursor: pointer;
+}
+@media (max-width: 1000px){
+  .nav article span:last-child{
+    display: none; 
+  }
+  .nav article {
+    width: 60%;
+  }
+  .nav aside{
+    width: 35%;
+  }
+}
+@media (max-width: 580px){
+  .nav article i{
+    display: none; 
+  }
+  .nav article {
+    width: 48%;
+  }
+  .nav aside{
+    width: 48%;
+  }
 }

@@ -33,17 +33,19 @@ export default function RootLayout({ children }) {
             <Footer/>
           </div>
         </div>
-        <div className={componentStyles.squaresContainer}>
-          {
-            Array.from({length:9}).map((_, index)=>(
-              <div key={index} className={`${componentStyles.square} ${componentStyles[`square${index}`]}`} style={{animationDuration: `${item_anim(index)}s`}}></div>
-            ))
-          }
-          {
-            Array.from({length:9}).map((_, index)=>(
-              <div key={index} className={`${componentStyles.rect} ${componentStyles[`rect${index}`]}`} style={{animationDuration: `${item_anim(index)}s`}}></div>
-            ))
-          }
+        <div className={styles.back_container}>
+            <div className={componentStyles.squaresContainer}>
+            {
+              Array.from({length:9}).map((_, index)=>(
+                <div key={index} className={`${componentStyles.square} ${componentStyles[`square${index}`]}`} style={{animationDuration: `${item_anim(index)}s`}}></div>
+              ))
+            }
+            {
+              Array.from({length:9}).map((_, index)=>(
+                <div key={index} className={`${componentStyles.rect} ${componentStyles[`rect${index}`]}`} style={{animationDuration: `${item_anim(index)}s`}}></div>
+              ))
+            }
+          </div>
         </div>
       </div>
     </>

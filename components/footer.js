@@ -7,10 +7,10 @@ const Footer = () => {
         Copyright © 2024, &nbsp;
       </span>
       <i>
-        Sylvie Mutuyimana.  &nbsp;
+        Sylvie Mutuyimana. 
       </i>
       <span>
-        All Rights Reserved
+        &nbsp; All Rights Reserved
       </span>
       </article>
     <aside>

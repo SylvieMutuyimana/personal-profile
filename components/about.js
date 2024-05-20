@@ -8,7 +8,7 @@ const Projects = ({theData}) => {
       <div className={`${componentStyles.grid} ${componentStyles.nogrid}`}>
         <section id="Bio" className={styles.about}>
         <article>
-          <img src="/iiii.png" loading="lazy" alt="I" width={"200px"}/>
+          <img src="/ii.png" loading="lazy" alt="I" width={"200px"}/>
         </article>
         <aside>
           <p>

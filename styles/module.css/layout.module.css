@@ -1,57 +1,53 @@
 
 .App {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   height: 100vh;
   position: relative; 
   padding: 1% 7%;
-
 }
 
 .App .fullPage{
   width: 100%;
-  border-left: 2px solid var(--dark);
-  border-right: 2px solid var(--dark);
-  border-bottom: 2px solid var(--dark);
   overflow: hidden;
   height: 100%;
-  overflow-y: scroll;
   border-radius: 20px;
-  
 }
 
 .App .fullPage .header{
-  background-color: var(--dark);
   overflow: hidden;
   width: 100%;
-  z-index: 999999;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0px;
+  margin-top: 0px;
   align-items: center;
   justify-content: center;
+  height: 10%;
+  overflow: hidden;
+  box-shadow: 4px 4px rgb(3, 0, 19);
 }
 
 .App .fullPage .content{
   background: linear-gradient(
     to bottom,
-    transparent,#ffff652a
+    transparent, #84ff650c
   )
-  #0050ac50;
+  #020c1848;
   padding: 0 2% 5px 5%;
   width: 100%;
+  overflow-y: scroll;
+  height: 83%;
+  border-left: 1px solid rgba(172, 255, 47, 0.05);
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
 } 
 .App .fullPage .footer{
+  border-left: 1px solid rgba(172, 255, 47, 0.05);
+  border-right: 1px solid rgba(172, 255, 47, 0.05);
+  border-bottom: 1px solid rgba(172, 255, 47, 0.05);
   background: rgb(0, 0, 31);
+  height: 7%;
   padding: 5px 10px ;
   overflow: hidden;
   width: 100%;
-  z-index: 999999;
-  position: -webkit-sticky;
-  position: sticky;
-  bottom: 0px;
+  margin-bottom: 0px;
   align-items: center;
   justify-content: center;
   padding: 7px 0px;
@@ -59,33 +55,100 @@
 
 
 /* width */
-.App .fullPage::-webkit-scrollbar {
-  width: 2px;
+.App .fullPage .content::-webkit-scrollbar {
+  width: 1px;
 }
 
 /* Track */
-.App .fullPage::-webkit-scrollbar-track {
-  background: #0050ac50;
+.App .fullPage .content::-webkit-scrollbar-track {
+  background: #70ac0031;
 }
 
 /* Handle */
-.App .fullPage::-webkit-scrollbar-thumb {
+.App .fullPage .content::-webkit-scrollbar-thumb {
   background: rgba(205, 205, 50, 0.511);
   border-radius: 20%;
   height: 5px !important;
 }
 
 /* Handle on hover */
-.App .fullPage::-webkit-scrollbar-thumb:hover {
+.App .fullPage .content::-webkit-scrollbar-thumb:hover {
   background: #11958f;
+}
+
+
+#back_container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -99999999999999;
+}
+
+
+@media (max-width: 1000px) {
+  .App .fullPage .header{
+    height: 10%;
+  }
+  .App .fullPage .content{
+    height: 83%;
+  } 
+  .App .fullPage .footer{
+    height: 7%;
+  }  
 }
 
 
 
 
-#container {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: -99999999999999;
+
+
+
+
+@media (max-height: 500px) {
+  .App .fullPage .header{
+    height: 11%;
+  }
+  
+  .App .fullPage .content{
+    height: 80%;
+  } 
+  .App .fullPage .footer{
+    height: 9%;
+  }  
+}
+@media (max-height: 450px) {
+  .App .fullPage .header{
+    height: 12%;
+  }
+  
+  .App .fullPage .content{
+    height: 79%;
+  } 
+  .App .fullPage .footer{
+    height: 9%;
+  }  
+}
+@media (max-height: 350px) {
+  .App .fullPage .header{
+    height: 40px;
+  }
+  
+  .App .fullPage .content{
+    height: calc(100% - 40px - 40px);
+  } 
+  .App .fullPage .footer{
+    height: 40px;
+  }  
+}
+@media (min-height: 600px) {
+  .App .fullPage .header{
+    height: 50px;
+  }
+  
+  .App .fullPage .content{
+    height: calc(100% - 50px - 40px);
+  } 
+  .App .fullPage .footer{
+    height: 40px;
+  }  
 }
