@@ -18,12 +18,14 @@
             "Java","Node Js", "C/C++" 
         ],
         "all":{
-            "UI/UX":"", "Javascript":"", "TypeScript":"", "Next JS":"", "React JS":"", "React Native":"", "Flutter":"",
-            "Python":"", "Django Stack":"", 
-            "HTML & CSS":"", "SASS":"", "React Material UI":"", "Styled-Components":"", "Tailwind":"", 
-            "Docker":"", "AWS":"", "Git":"",
-            "GraphQL":"",
-            "Java":"" ,"Node Js":"", "C/C++": "" 
+            "UI/UX":"80%", "Javascript":"80%", "TypeScript":"70%", "Next JS":"90%", 
+            "React JS":"80%", "React Native":"80%", "Flutter":"60%",
+            "Python":"80%", "Django Stack":"75%", 
+            "HTML & CSS":"90%", "SASS":"80%", "React Material UI":"60%", 
+            "Styled-Components":"70%", "Tailwind":"60%", 
+            "Docker":"60%", "AWS":"70%", "Git":"90%",
+            "GraphQL":"70%",
+            "Java":"70%" ,"Node Js":"80%", "C/C++": "60%"
         }
     }
 }

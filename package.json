@@ -12,6 +12,7 @@
     "anime": "^0.1.2",
     "next": "13.5.4",
     "react": "^18",
+    "react-circular-progressbar": "^2.1.0",
     "react-dom": "^18",
     "scrollmonitor": "^1.2.11"
   }

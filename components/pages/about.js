@@ -1,9 +1,19 @@
-// In Projects.js
-import React from 'react';
+// In About.js
+import React, { useEffect, useState } from 'react';
 import componentStyles from '../../styles/module.css/components.module.css';
 import styles from '../../styles/module.css/about.module.css';
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 
-const Projects = ({theData}) => {
+const About = ({theData}) => {
+  const [allSkills, setSkills] = useState(null);
+
+  useEffect(()=>{
+    if(theData?.technologies?.all  && !allSkills) {
+      setSkills(theData?.technologies?.all)
+    }
+  },[theData])
+
     return (
       <div className={`${componentStyles.grid} ${componentStyles.nogrid}`}>
         <section id="Bio" className={styles.about}>
@@ -43,9 +53,9 @@ const Projects = ({theData}) => {
             Get in touch &gt;
           </a>
         </aside>
-    </section>
-        </div>
+      </section>
+      </div>
     );
 };
 
-export default Projects;
+export default About;

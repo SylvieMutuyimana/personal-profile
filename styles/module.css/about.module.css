@@ -23,6 +23,23 @@
   width: auto !important;
 }
 
+.skills {
+  padding: 20px;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 10px;
+}
+
+.skillItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
 @media only screen and (max-width: 1000px) {
   .about{
     height: 450px;
