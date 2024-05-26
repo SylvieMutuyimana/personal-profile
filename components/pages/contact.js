@@ -1,5 +1,5 @@
-import styles from '../styles/module.css/contact.module.css'
-import componentStyles from '../styles/module.css/components.module.css';
+import styles from '../../styles/module.css/contact.module.css'
+import componentStyles from '../../styles/module.css/components.module.css';
 
 const Contact = () => {
   const submitForm =()=>{

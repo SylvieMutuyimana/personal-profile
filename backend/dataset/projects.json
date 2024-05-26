@@ -4,7 +4,7 @@
             "id": "624gy5cb-aeb0-4d58-a197-f099d8767bec", "name": "Rwanda Scouts Admin Site",
             "collaborators": [],
             "host": "https://scouts-org-front-end-beta.vercel.app/dashboard", "repository":"",
-            "languages":["HTML", "CSS", "Next.js", "JavaScript"],
+            "languages":["Next.js", "MongoDB", "Styled Components"],
             "summary":"Admin site for Rwanda scouts organisation",
             "status":"done",
             "img":"/projects/scouts.png"
@@ -13,7 +13,7 @@
             "id": "6239aacb-aeb0-4d58-a197-f099d8767bec", "name": "Kenya Housing Prediction Model",
             "collaborators": ["Adeline Tuyizere", "Diane Uwiduhaye"],
             "host": "https://kenya-rentalprices.onrender.com/", "repository":"",
-            "languages":["HTML", "CSS", "Flask", "Python", "JavaScript"],
+            "languages":["Flask", "Python", "AI Model", "HTML", "CSS" ],
             "summary":"A housing prediction model for citizens to find the best city for living",
             "status":"done",
             "img":"/projects/kenya.png"
@@ -21,8 +21,8 @@
         {
             "id": "6239aacb-aeb0-4d58-a197-b09t9d8767bec", "name": "Share Ride",
             "collaborators": ["Polie Vicia", "Adeline Tuyizere", "Diane Uwiduhaye"],
-            "host": null, "repository":"",
-            "languages":["HTML", "CSS", "Django", "Python"],
+            "host": "https://share-ride.onrender.com/", "repository":"",
+            "languages":["Python - Django", "HTML", "CSS"],
             "summary":"App that connects car owners and passengers",
             "status":"done",
             "img":"/projects/share_ride.png"
@@ -31,7 +31,7 @@
             "id": "6239aacb-aeb0-4d58-af97-f099d8767rtbec", "name": "ecoSWAP",
             "collaborators": ["Adeline Tuyizere", "Diane Uwiduhaye"],
             "host": null, "repository":"",
-            "languages":["React Native", "Next.js", "SCSS"],
+            "languages":["React Native", "Next.js", "SASS"],
             "summary":"An e-commerce app that revolutionalises e-waste management in Rwanda ",
             "status":"development",
             "img":"/projects/ecoswap.png"
@@ -49,18 +49,10 @@
             "id": "6239aacb-aeb0-4d58-a197-b099767bevfc", "name": "Personal Profile",
             "collaborators": "",
             "host": null, "repository":"",
-            "languages":["HTML", "CSS","Flask", "JSON", "React"],
+            "languages":["Next JS", "Python", "SASS", "JSON"],
             "summary":"My Personal Profile showcasing my projects and skills",
-            "status":"development",
+            "status":"done",
             "img":"/projects/profile.png"
-        },
-        {
-            "id": "6239aacb-aeb0-4d58-a197-f099d8767bec", "name": "Fully Automated House Model",
-            "collaborators": ["Adeline Tuyizere", "Diane Uwiduhaye"],
-            "host": null, "repository":"",
-            "languages":["C++"],
-            "summary":"Full Automated House Model with security measures",
-            "status":"done"
         },
         {
             "id": "6239aacb-aeb0-4d58-a197-f099d8767bec", "name": "SIHA Health App",
@@ -68,6 +60,22 @@
             "host": null, "repository":"",
             "languages":["Flutter", "Firebase"],
             "summary":"A health app to connect patients and doctors",
+            "status":"done"
+        },
+        {
+            "id": "6239aacb-aeb0-4d58-a197-f099d8gfg7bec", "name": "Biology Virtual Lab",
+            "collaborators": ["Polie Vicia", ""],
+            "host": null, "repository":"",
+            "languages":["Unity", "C#"],
+            "summary":"A virtual lab allowing students to learn biology through interraction with the virtual lab",
+            "status":"done"
+        },
+        {
+            "id": "6239aacb-aeb0-4d58-a197-f099d8767bec", "name": "Fully Automated House Model",
+            "collaborators": [""],
+            "host": null, "repository":"",
+            "languages":["C++", "Arduino"],
+            "summary":"Full Automated House Model with security measures",
             "status":"done"
         }
     ],

@@ -1,4 +1,4 @@
-import styles from '../styles/module.css/footer.module.css'
+import styles from '../../styles/module.css/footer.module.css'
 const Footer = () => {
   return (
     <nav className={styles.nav}>

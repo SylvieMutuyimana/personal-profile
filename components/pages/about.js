@@ -1,44 +1,48 @@
+// In Projects.js
 import React from 'react';
-import styles from '../styles/module.css/about.module.css';
+import componentStyles from '../../styles/module.css/components.module.css';
+import styles from '../../styles/module.css/about.module.css';
 
-const BioSection = ({theData}) => {
-  
-  return (
-    <section id="Bio" className={styles.about}>
+const Projects = ({theData}) => {
+    return (
+      <div className={`${componentStyles.grid} ${componentStyles.nogrid}`}>
+        <section id="Bio" className={styles.about}>
         <article>
-          <img src="/iiii.png" loading="lazy" alt="I"/>
+          <img src="/ii.png" loading="lazy" alt="I" width={"200px"}/>
         </article>
         <aside>
-          <h2>About Sylvie?</h2>
           <p>
             {
               theData && theData.intro &&(
                 <>
                   Sylvie is a {' '}
-                  <span className={styles['textspan']}>
+                  <span className={styles.textspan}>
                     Full Stack Developer
                   </span>
                   {', '}
-                  <span className={styles['ttextspan']}> 
+                  <span className={styles.textspan}> 
                     UI/UX
                   </span>
-                  and
-                  <span className={styles['textspan']}> 
+                  {' '}and{' '}
+                  <span className={styles.textspan}> 
                     Web Designer
                   </span>
+                  .<br />‍<br />
                   {theData.intro && theData.intro.split('. ')[0]}
                   <br />‍<br />
                   {theData.intro && theData.intro.split('. ')[1]}
+                  <br />‍<br />
                 </>
               )
             }
           </p>
           <a href="#contact" className={styles.link}>
-            get in touch &gt;
+            Get in touch &gt;
           </a>
         </aside>
     </section>
-  );
+        </div>
+    );
 };
 
-export default BioSection;
+export default Projects;

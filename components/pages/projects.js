@@ -1,7 +1,7 @@
 // In Projects.js
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react';
-import componentStyles from '../styles/module.css/components.module.css';
+import componentStyles from '../../styles/module.css/components.module.css';
 
 const Projects = ({theData, name, expandedSection }) => {
     const [allProjects, setProjects] = useState(null);
@@ -13,7 +13,7 @@ const Projects = ({theData, name, expandedSection }) => {
             setProjects(theData.huge.slice(0,4))
         }
     },[expandedSection, theData])
-
+    console.log('apps: ', allProjects)
     return (
         <div className={componentStyles.grid}>
             {(allProjects && allProjects.length > 0 ? allProjects : Array.from({ length: 4 })).map((project, index) => (
@@ -41,10 +41,10 @@ const Projects = ({theData, name, expandedSection }) => {
                     <div className={componentStyles.contri}>
                         {
                             project?.languages && project?.languages?.length>0 && 
-                            project.languages.map((language, index)=>{
-                                <React.Fragment key={index}>{language}</React.Fragment>
-                            })
-                        }
+                            project.languages.map((language, index)=>(
+                                <i key={index}>{language} {index!==project.languages.length - 1 && ', '}</i>
+                            ))
+                        }                         
                     </div>
                 </a>
             ))}

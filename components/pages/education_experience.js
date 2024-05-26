@@ -1,7 +1,7 @@
 // In Projects.js
 import React from 'react';
-import componentStyles from '../styles/module.css/components.module.css';
-import styles from '../styles/module.css/about.module.css';
+import componentStyles from '../../styles/module.css/components.module.css';
+import styles from '../../styles/module.css/about.module.css';
 
 const Education_Exp = () => {
   const theData = {

@@ -1,10 +1,10 @@
-import BioSection from '@/components/about';
-import Contact from '@/components/contact';
+import BioSection from '@/components/pages/about';
+import Contact from '@/components/pages/contact';
 import ReturnGroup from '@/components/groups';
-import Projects from '@/components/projects';
-import RendingPage from '@/components/rendingPage';
-import Skills from '@/components/skills';
-import SmallProjects from '@/components/smallProjects';
+import Projects from '@/components/pages/projects';
+import RendingPage from '@/components/pages/rendingPage';
+import Skills from '@/components/pages/skills';
+import SmallProjects from '@/components/pages/smallProjects';
 import { useState } from 'react';
 const Index = ({allProjects, myAbout, myQuotes, mySkills}) => {
   const [expandedSection, setExpanded] = useState(null)
@@ -21,13 +21,10 @@ const Index = ({allProjects, myAbout, myQuotes, mySkills}) => {
       <div id='home'>
         <RendingPage myAbout={myAbout} myQuotes={myQuotes}/>
       </div> 
-
       <div id='projects'>
         <ReturnGroup name={'PROJECTS'} DynamicComponent={Projects} theData={allProjects} expandedSection={expandedSection} changeExpanded={changeExpanded}/>
       </div>
-      <div id='smallprojects'>
-        <ReturnGroup name={'MINI APPS'} DynamicComponent={SmallProjects} theData={allProjects} expandedSection={expandedSection} changeExpanded={changeExpanded}/>
-      </div>    
+
       <div id='about'>
         <ReturnGroup name={'ABOUT'} DynamicComponent={BioSection} theData={myAbout}/>
       </div>

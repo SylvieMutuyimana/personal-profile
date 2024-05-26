@@ -88,21 +88,36 @@ clip-path: polygon(64% 0%, 83% 12%, 100% 8%,
 .nav aside .menu:hover .icon{
   background-color: var(--yellow);
 }
+
 .nav aside .normal_menu{
   display: block;
 }
-.nav aside .dropdown_menu{
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(70%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.nav aside .dropdown_menu {
   list-style-type: none;
   position: absolute;
   z-index: 1000000;
-  background-color: var(--dark);
-  margin: 0;
-  width: auto;
-  left: 7%;
-  top: 55px;
-  padding: 0 20px 30px 20px;
-  width: 86%;
+  background-color: rgb(4, 0, 19);
+  top: 56px;
+  height: calc(100% - 58px - 43px);
+  right: 7%;
+  width: 200px;
+  text-align: left;
+  align-items: flex-start;
+  padding-left: 30px;
+  animation: slideInFromRight 0.1s ease-out; /* Adjust the duration and easing as needed */
 }
+
 .nav aside .dropdown_menu li{
   margin-top: 30px;
 }
@@ -116,4 +131,11 @@ clip-path: polygon(64% 0%, 83% 12%, 100% 8%,
     display: block;
   }
 }
-
+@media (min-width: 650px){
+  .nav aside .dropdown_menu{
+    display: none;
+  }
+  .nav aside .menu{
+    display: none;
+  }
+}

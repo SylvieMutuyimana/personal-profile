@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import styles from '../styles/module.css/dashboard.module.css'
+import styles from '../../styles/module.css/dashboard.module.css'
 import { useState, useEffect } from 'react';
 
 const RendingPage = ({myAbout, myQuotes}) => {

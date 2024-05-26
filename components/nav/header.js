@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import styles from '../styles/module.css/header.module.css';
-import { page_links } from './page_links';
+import styles from '../../styles/module.css/header.module.css';
+import { page_links } from '../page_links';
 
 const Header = () => {
   const { pathname } = useRouter();

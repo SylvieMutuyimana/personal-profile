@@ -1,10 +1,10 @@
 // RootLayout.js
-import Header from '@/components/header';
+import Header from '@/components/nav/header';
 import Head from 'next/head';
 import styles from '../styles/module.css/layout.module.css';
 import componentStyles from '../styles/module.css/layout_components.module.css';
-import Footer from '@/components/footer';
-import Back_drop from '@/components/Back_drop';
+import Footer from '@/components/nav/footer';
+import Back_drop from '@/components/bac/Back_drop';
 
 export default function RootLayout({ children }) {
   const item_anim = (index)=> {

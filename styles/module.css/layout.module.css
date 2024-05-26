@@ -103,7 +103,6 @@
 
 
 
-
 @media (max-height: 500px) {
   .App .fullPage .header{
     height: 11%;
@@ -150,5 +149,17 @@
   } 
   .App .fullPage .footer{
     height: 40px;
+  }  
+}
+
+
+
+
+@media (max-width: 450px) {
+  .App {
+    padding: 1% 0%;
+  }
+  .App .fullPage{
+    overflow-x: hidden;
   }  
 }

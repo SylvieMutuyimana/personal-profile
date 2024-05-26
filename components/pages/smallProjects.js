@@ -1,6 +1,6 @@
 // In smallProjects.js
 import { useEffect, useState } from 'react';
-import componentStyles from '../styles/module.css/components.module.css';
+import componentStyles from '../../styles/module.css/components.module.css';
 
 const SmallProjects = ({ theData, name, expandedSection }) => {
     const [allProjects, setProjects] = useState(null);
