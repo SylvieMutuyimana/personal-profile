@@ -21,12 +21,11 @@ const Index = ({allProjects, myAbout, myQuotes, mySkills}) => {
       <div id='home'>
         <RendingPage myAbout={myAbout} myQuotes={myQuotes}/>
       </div> 
+      <div id='about'>
+        <ReturnGroup name={'ABOUT ME'} DynamicComponent={BioSection} theData={myAbout}/>
+      </div>
       <div id='projects'>
         <ReturnGroup name={'PROJECTS'} DynamicComponent={Projects} theData={allProjects} expandedSection={expandedSection} changeExpanded={changeExpanded}/>
-      </div>
-
-      <div id='about'>
-        <ReturnGroup name={'ABOUT'} DynamicComponent={BioSection} theData={myAbout}/>
       </div>
       <div id='skills'>
         <ReturnGroup name={'SKILLS'} DynamicComponent={Skills} theData={mySkills} expandedSection={expandedSection} changeExpanded={changeExpanded}/>

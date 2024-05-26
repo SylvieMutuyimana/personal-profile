@@ -11,7 +11,7 @@ const ReturnGroup = ({name, DynamicComponent, theData, expandedSection, changeEx
                 </article>
                 <aside>
                     {
-                        name!=='ABOUT' &&(
+                        name!=='ABOUT ME' &&(
                             <i onClick={()=>changeExpanded(name)}>
                                 view all <span>-&gt;</span>
                             </i>
