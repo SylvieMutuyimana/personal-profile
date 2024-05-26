@@ -4,5 +4,26 @@
     "email":"mutuyimanasylvie@gmail.com",
     "role":"Web designer and UI/UX and full-stack developer",
     "role_expl": "Crafting Web Alchemy with Cutting-Edge Tools and AI",
-    "resume":"https://drive.google.com/file/d/1Edp1S-L8DsrXyUZ1VqkWwPgXgdmJmiO9/view?usp=sharing"
+    "resume":"https://drive.google.com/file/d/1Edp1S-L8DsrXyUZ1VqkWwPgXgdmJmiO9/view?usp=sharing",
+    "technologies": {
+        "main":[
+            "UI/UX", "Javascript", "TypeScript", "Next JS", "React JS", "React Native", 
+            "Python", "Django Stack"
+        ],
+        "other":[
+            "Flutter",
+            "HTML & CSS", "SASS", "React Material UI", "Styled-Components", "Tailwind", 
+            "Docker", "AWS", "Git",
+            "GraphQL",
+            "Java","Node Js", "C/C++" 
+        ],
+        "all":{
+            "UI/UX":"", "Javascript":"", "TypeScript":"", "Next JS":"", "React JS":"", "React Native":"", "Flutter":"",
+            "Python":"", "Django Stack":"", 
+            "HTML & CSS":"", "SASS":"", "React Material UI":"", "Styled-Components":"", "Tailwind":"", 
+            "Docker":"", "AWS":"", "Git":"",
+            "GraphQL":"",
+            "Java":"" ,"Node Js":"", "C/C++": "" 
+        }
+    }
 }

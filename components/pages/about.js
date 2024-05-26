@@ -28,14 +28,17 @@ const Projects = ({theData}) => {
                     Web Designer
                   </span>
                   .<br />‍<br />
-                  {theData.intro && theData.intro.split('. ')[0]}
-                  <br />‍<br />
-                  {theData.intro && theData.intro.split('. ')[1]}
-                  <br />‍<br />
+                  {theData.intro && theData.intro.split('. ').map((sentence, index, array)=>(
+                    <React.Fragment key={index}>
+                      {sentence}.
+                      {index < array.length - 1 && (<><br /><br /></>)}
+                    </React.Fragment>
+                  ))}
                 </>
               )
             }
           </p>
+          <br/>
           <a href="#contact" className={styles.link}>
             Get in touch &gt;
           </a>
