@@ -4,7 +4,6 @@
   max-width: 100%;
   grid-gap: 1rem;
   margin-top: 10px;
-  font-family: 'Brush Script MT', cursive;
 }
 
 .grid.nogrid{
@@ -117,7 +116,6 @@
   margin-left:  10px  !important;
 }
 .group .head aside{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .group .head aside:hover{
   color: var(--yellow);
