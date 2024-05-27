@@ -1,4 +1,4 @@
-// In Projects.js
+// In Skills.js
 import componentStyles from '../../styles/module.css/components.module.css';
 
 const Skills = ({theData, name, expandedSection }) => {
