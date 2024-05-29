@@ -1,7 +1,6 @@
 :root {
   --background_start_rgb: 0, 0, 0;
   --background_end_rgb: 0, 0, 0;
-
   --primary_glow: radial-gradient(rgba(61, 169, 173, 0.274), rgba(1, 65, 255, 0));
   --secondary_glow: linear-gradient(
     to bottom right,
@@ -28,7 +27,6 @@
   --card_back: rgba(0, 0, 34, 0.384);
 
 }
-
 
 * {
   box-sizing: border-box;
