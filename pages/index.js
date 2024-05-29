@@ -15,7 +15,6 @@ const Index = ({allProjects, myAbout, myQuotes, mySkills}) => {
       setExpanded(name)
     }
   }
-  console.log('expandedSection: ', expandedSection)
   return (
     <div>
       <div id='home'>

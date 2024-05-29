@@ -5,11 +5,13 @@ import { page_links } from '../page_links';
 
 const Header = () => {
   const { pathname } = useRouter();
-  const [activeLink, setActiveLink] = useState(pathname);
+  const [activeLink, setActiveLink] = useState(page_links.find(link=>link.name === 'HOME').link);
   const [displayMenu, setDisplayMenu] = useState(false); // Use false for initial state
 
   useEffect(() => {
-    setActiveLink(pathname);
+    if(pathname!=='/'){
+      setActiveLink(pathname);
+    }
   }, [pathname]);
 
   const handleLinkClick = (link) => {
@@ -19,7 +21,6 @@ const Header = () => {
   const changeDisplay = () => {
     setDisplayMenu(!displayMenu);
   };
-
   return (
     <nav className={styles.nav}>
       <article>
@@ -29,8 +30,7 @@ const Header = () => {
         <div className={styles.normal_menu}>
           {page_links.map((page, index) => (
             <a
-              href={page.link}
-              key={index}
+              href={page.link} key={index}
               onClick={() => handleLinkClick(page.link)}
               className={activeLink.endsWith(page.link) ? styles.active : ''}
             >

@@ -13,7 +13,6 @@ const Projects = ({theData, name, expandedSection }) => {
             setProjects(theData.huge.slice(0,4))
         }
     },[expandedSection, theData])
-    console.log('apps: ', allProjects)
     return (
         <div className={componentStyles.grid}>
             {(allProjects && allProjects.length > 0 ? allProjects : Array.from({ length: 4 })).map((project, index) => (
@@ -22,7 +21,7 @@ const Projects = ({theData, name, expandedSection }) => {
                     <div className={componentStyles.imgCont}>
                         {
                             project?.img ?(
-                                <Image src={project.img} width={40} height={40} className={componentStyles.projectImage}/>
+                                <Image src={project.img} alt={project.img} width={40} height={40} className={componentStyles.projectImage}/>
                             ):(
                                 <div className={`${componentStyles.projectImage} ${componentStyles.noImg}`} />
                             )

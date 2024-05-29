@@ -20,7 +20,6 @@ function App() {
         const the_route = backend_url + endpoint;
         try {
             const response = await fetch(the_route);
-            console.log('Successfully fetched for ', name, 'on: ', the_route);
             if (response.ok) {
                 const data = await response.json();
                 if (name === 'about') {
@@ -34,10 +33,8 @@ function App() {
                 }
                 setCompletedFetches(prev=> prev + 1)
             } else {
-                console.log(`Error fetching data from ${endpoint}: ${response.status}`);
             }
         } catch (error) {
-            console.log(`Error connecting to dataset: ${error}`);
         } 
     };
      
@@ -52,6 +49,7 @@ function App() {
             }
         });
     }, []); 
+    
     useEffect(()=>{
         setFetchPerc((completedFetches / totalFetches) * 100)
     },[completedFetches])
