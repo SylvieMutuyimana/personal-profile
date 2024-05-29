@@ -1,4 +1,4 @@
-export const backend_url = "https://backend-sylvie.onrender.com/"
+export const backend_url = process.env.NEXT_PUBLIC_BACKEND_URL
 
 export const backendLinks = [
     {name:'about', link:'about'},

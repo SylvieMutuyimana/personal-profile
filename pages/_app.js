@@ -31,12 +31,15 @@ function App() {
                 } else if (name === 'quotes') {
                     setQuotes(data);
                 }
-                setCompletedFetches(prev=> prev + 1)
+                setCompletedFetches(prev => prev + 1);
             } else {
+                console.error(`Error fetching ${name}: ${response.statusText}`);
             }
         } catch (error) {
-        } 
+            console.error(`Error fetching ${name}: ${error.message}`);
+        }
     };
+   
      
     const checkpoint = {
         'about': myAbout, 'skills': mySkills, 'quotes': myQuotes, 'projects': allProjects
