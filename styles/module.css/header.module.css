@@ -2,6 +2,10 @@
   font-family: 'Nabla';
   src: url('../../fonts/Nabla-Regular.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'Dosis';
+  src: url('../../fonts/Dosis-Medium.ttf') format('truetype');
+}
 .nav{
   width: 100%;
   height: 100%;
@@ -32,25 +36,27 @@
   width: 100%;
 }
 .nav aside a {
-  margin-right: 10px !important;
+  margin-left: 10px !important;
   font-weight: bold;
-  padding: 13px 10px ;
+  padding: 7px 10px ;
   color:rgba(255, 240, 190, 0.897);
   background-image: linear-gradient(to right bottom,
   var(--actual_yellow), var(--yellow), 
   #190072, #001f4b, 
   #12eb5e8c);
-clip-path: polygon(64% 0%, 83% 12%, 100% 8%, 
-94% 78%, 77% 79%, 32% 100%, 
-78% 708%, 0% 43%, 17% 12%);
+  clip-path: polygon(10% 10%, 100% 100%, 100% 10%, 
+  10% 50%, 70% 100%, 100% 11%, 
+  10% 100%, 90% 100%, 100% 1%);
+  clip-path: padding-box xywh(0px 5px 100% 100% round 00% 10% 10% 50%);
+  
 }
-.nav a:hover{
+.nav aside a:hover{
   background-image: linear-gradient(to right bottom, 
   #0d003a,  #12eb5e8c
     );
   color:greenyellow
   }
-.nav a.active{
+.nav aside a.active{
   background-image: linear-gradient(to right bottom, 
   #0d003a,  #12eb5e8c
     );
@@ -60,13 +66,7 @@ clip-path: polygon(64% 0%, 83% 12%, 100% 8%,
 .nav .author a:hover{
   color: violet;
   box-shadow: 0px 1px Brown;
-  text-shadow: 0.02em 0.02em 0 var(--yellow), 0 0 0.5em var(--actual_yellow);
-  background-image: linear-gradient(to right bottom, 
-    #12eb5e8c, #0d003a
-    );
-  clip-path: polygon(48% 3%, 83% 12%, 100% 8%, 
-  178% 78%, 77% 789%, 56% 100%, 
-  78% 708%, 0% 0%, 17% 12%);
+
 }
 
 .nav aside .menu{

@@ -13,6 +13,7 @@ const Projects = ({theData, name, expandedSection }) => {
             setProjects(theData.huge.slice(0,4))
         }
     },[expandedSection, theData])
+    
     return (
         <div className={componentStyles.grid}>
             {(allProjects && allProjects.length > 0 ? allProjects : Array.from({ length: 4 })).map((project, index) => (

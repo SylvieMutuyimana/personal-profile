@@ -24,13 +24,12 @@ const Header = () => {
   return (
     <nav className={styles.nav}>
       <article>
-        <code className={styles.author}><a href="#">SYLVIE</a></code>
+        <code className={styles.author}><a href="/">SYLVIE</a></code>
       </article>
       <aside>
         <div className={styles.normal_menu}>
           {page_links.map((page, index) => (
-            <a
-              href={page.link} key={index}
+            <a href={`/${page.link}`} key={index}
               onClick={() => handleLinkClick(page.link)}
               className={activeLink.endsWith(page.link) ? styles.active : ''}
             >
@@ -48,8 +47,7 @@ const Header = () => {
             <ul className={styles.dropdown_menu}> 
               {page_links.map((page, index) => (
                 <li>
-                <a 
-                href={page.link}
+                <a href={page.link}
                 key={index} 
                 onClick={() => {
                   handleLinkClick(page.link);

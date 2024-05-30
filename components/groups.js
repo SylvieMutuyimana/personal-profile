@@ -1,7 +1,7 @@
 // In ReturnGroup.js
 import componentStyles from '../styles/module.css/components.module.css';
 
-const ReturnGroup = ({name, DynamicComponent, theData, expandedSection, changeExpanded }) => {
+const ReturnGroup = ({name, DynamicComponent, theData, expandedSection, changeExpanded, all_link }) => {
     return (
         <div className={componentStyles.group}>
             <div className={componentStyles.head}>
@@ -12,9 +12,19 @@ const ReturnGroup = ({name, DynamicComponent, theData, expandedSection, changeEx
                 <aside>
                     {
                         name!=='ABOUT ME' &&(
-                            <i onClick={()=>changeExpanded(name)}>
-                                view all <span>-&gt;</span>
-                            </i>
+                            <>
+                                {
+                                    all_link?(
+                                        <a href={all_link}><i>
+                                            view all <span>-&gt;</span>
+                                        </i></a>
+                                    ):(
+                                        <i onClick={()=>changeExpanded(name)}>
+                                            view all <span>-&gt;</span>
+                                        </i>
+                                    )
+                                }
+                            </>
                         )
                     }
                 </aside>
