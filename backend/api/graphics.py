@@ -14,14 +14,14 @@ def theDesignData(designId):
     theDesign = all_designs.get(designId, [])
     return theDesign
 
-@app.route('/skills', methods=['GET'])
+@app.route('/graphics', methods=['GET'])
 def allDesigns_Route ():
     all_designs = allDesigns()
     if not all_designs:
-        return jsonify({"message": "No skills data found"})
+        return jsonify({"message": "No graphics data found"})
     return jsonify(all_designs)
 
-@app.route('/skills/<designId>', methods=['GET'])
+@app.route('/graphics/<designId>', methods=['GET'])
 def theDesignData_Route(designId):
     theDesign_data = theDesignData(designId)
     if not theDesign_data:
