@@ -6,7 +6,7 @@ app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
 def allDesigns():
-    all_designs = dataset.read_dataset(dataset.file_paths["designs_path"])
+    all_designs = dataset.read_dataset(dataset.file_paths["graphics_path"])
     return all_designs
 
 def theDesignData(designId):
