@@ -15,7 +15,7 @@ def theDesignData(designId):
     return theDesign
 
 @app.route('/skills', methods=['GET'])
-def allDesigns_Route():
+def allDesigns_Route ():
     all_designs = allDesigns()
     if not all_designs:
         return jsonify({"message": "No skills data found"})

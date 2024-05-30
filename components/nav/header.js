@@ -24,7 +24,7 @@ const Header = () => {
   return (
     <nav className={styles.nav}>
       <article>
-        <code className={styles.author}><a href="#">Sylvie</a></code>
+        <code className={styles.author}><a href="#">SYLVIE</a></code>
       </article>
       <aside>
         <div className={styles.normal_menu}>
