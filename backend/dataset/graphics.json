@@ -1,14 +1,14 @@
 {
     "Feminism Stickers":{
-        "img":"designs/stickers.png",
+        "img":"/designs/stickers.png",
         "link":"https://drive.google.com/file/d/108LSYBeDxSaybxMIPgI3bzpvem8kGtM-/view"
     },
     "Feminist Org Brochure Template":{
-        "img":"designs/org.png",
+        "img":"/designs/org.png",
         "link":"https://drive.google.com/file/d/1ORoCtoILUYQdgW018gKrV_mwKd15saiF/view"
     },
     "Tourism bibrochure template":{
-        "img":"designs/stickers.png",
+        "img":"/designs/stickers.png",
         "link":"https://drive.google.com/file/d/1bYNYWEDxr3v0iF4tjK_QIdZBTcHTiRs-/view"
     }
 }
