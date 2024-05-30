@@ -1,12 +1,12 @@
+//_app.js
 import RootLayout from './layout';
 import '../styles/css/global.css';
 import styles from '../styles/module.css/layout.module.css';
 import { backendLinks, backend_url } from '@/components/constants';
 import { useEffect, useState } from 'react';
 import LoadingPage from '@/components/pages/LoadingPage';
-import Index from '.';
 
-function App() {
+function App({Component, pageProps}) {
     const [allProjects, setProjects] = useState(null);
     const [mySkills, setSkills] = useState(null);
     const [myAbout, setAbout] = useState(null);
@@ -63,7 +63,8 @@ function App() {
                     fetchPerc !== 100 ? ( 
                         <LoadingPage fetchPerc={fetchPerc} />
                     ) : (
-                        <Index 
+                        <Component
+                            {...pageProps} 
                             allProjects={allProjects}
                             myAbout={myAbout}
                             myQuotes={myQuotes}

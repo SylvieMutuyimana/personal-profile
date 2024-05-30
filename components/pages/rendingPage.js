@@ -21,7 +21,7 @@ const RendingPage = ({myAbout, myQuotes}) => {
     return(
       <div className={styles.topPage}>
         <div className={styles.rendingPage} >
-          <article style={styles.front}>
+          <article className={styles.front}>
             <div className={styles.heading}>
               <h2>
                 Sylvie is a 

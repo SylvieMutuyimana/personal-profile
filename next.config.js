@@ -6,7 +6,7 @@ module.exports = {
         headers: [
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; style-src 'self' https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline'; img-src 'self' data:",
+            value: "default-src 'self'; connect-src 'self' https://www.googleapis.com https://drive.google.com/ https://backend-sylvie.onrender.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline' 'unsafe-eval'; img-src 'self' data:",
           },
           {
             key: 'X-Frame-Options',

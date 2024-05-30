@@ -17,6 +17,7 @@ file_paths = {
     "projects_path":dataset("projects"),
     "quotes_path":dataset("quotes"),
     "skills_path":dataset("skills"),
+    "graphics_path":dataset("graphics")
 }
 
 #Read json file
