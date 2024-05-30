@@ -14,7 +14,7 @@
             "collaborators": ["Adeline Tuyizere", "Diane Uwiduhaye"],
             "host": "https://kenya-rentalprices.onrender.com/", "repository":"",
             "languages":["Flask", "Python", "AI Model", "HTML", "CSS" ],
-            "summary":"A housing prediction model for citizens to find the best city for living",
+            "summary":"A predictive web application for predicting housing prices in Kenya according to user preferences",
             "status":"done",
             "img":"/projects/kenya.png"
         },
@@ -23,16 +23,25 @@
             "collaborators": ["Polie Vicia", "Adeline Tuyizere", "Diane Uwiduhaye"],
             "host": "https://share-ride.onrender.com/", "repository":"",
             "languages":["Python - Django", "HTML", "CSS"],
-            "summary":"App that connects car owners and passengers",
+            "summary":"A ride-sharing app that facilitates cost-effective transportation by connecting car owners and passengers heading in the same direction.",
             "status":"done",
             "img":"/projects/share_ride.png"
+        },
+        {
+            "id": "6239aacb-aeb0-4yu8-a197-b09tghdg6ufsc", "name": "UI Template Designs",
+            "collaborators": [""],
+            "host": "https://drive.google.com/file/d/108LSYBeDxSaybxMIPgI3bzpvem8kGtM-/view?usp=drive_link", "repository":"",
+            "languages":["Canva"],
+            "summary":"Visually captivating stickers and brochures, tailored to feminist organizations.",
+            "status":"done",
+            "img":"/projects/graphics.png"
         },
         {
             "id": "6239aacb-aeb0-4d58-af97-f099d8767rtbec", "name": "ecoSWAP",
             "collaborators": ["Adeline Tuyizere", "Diane Uwiduhaye"],
             "host": null, "repository":"",
             "languages":["React Native", "Next.js", "SASS"],
-            "summary":"An e-commerce app that revolutionalises e-waste management in Rwanda ",
+            "summary":"An e-commerce solution facilitating the exchange of electronics promoting a circular economy. ",
             "status":"development",
             "img":"/projects/ecoswap.png"
         },
@@ -41,7 +50,7 @@
             "collaborators": ["Adeline Tuyizere", "Diane Uwiduhaye"],
             "host": "https://www.figma.com/proto/S9nofqKV7QbId4xaZ58xyk/Football-mobile-app?node-id=0-1&t=IuZPzl5Fc2bgtjcW-0&scaling=scale-down&page-id=0%3A1&starting-point-node-id=2%3A354&prev-org-id=external-teams&show-proto-sidebar=1", "repository":"",
             "languages":["Figma"],
-            "summary":"Connect with other Rwanda team fans",
+            "summary":"A social media to connect Rwanda team fans and their teams",
             "status":"development",
             "img":"/projects/fana.png"
         },
