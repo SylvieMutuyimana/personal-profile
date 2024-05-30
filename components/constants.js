@@ -4,5 +4,5 @@ export const backendLinks = [
     {name:'about', link:'about'},
     {name:'projects', link:'projects'},
     {name:'quotes', link:'quotes'},
-    {name:'skills', link:'skills'},
+    {name:'skills', link:'skills'}
 ]
