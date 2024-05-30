@@ -11,6 +11,7 @@ function App({Component, pageProps}) {
     const [mySkills, setSkills] = useState(null);
     const [myAbout, setAbout] = useState(null);
     const [myQuotes, setQuotes] = useState(null);
+    const [myDesigns, setDesigns] = useState(null);
     const [fetchPerc, setFetchPerc] = useState(0);
     const [completedFetches, setCompletedFetches] = useState(0);
 
@@ -30,6 +31,8 @@ function App({Component, pageProps}) {
                     setSkills(data);
                 } else if (name === 'quotes') {
                     setQuotes(data);
+                } else if (name === 'graphics') {
+                    setDesigns(data);
                 }
                 setCompletedFetches(prev => prev + 1);
             } else {
@@ -42,7 +45,8 @@ function App({Component, pageProps}) {
    
      
     const checkpoint = {
-        'about': myAbout, 'skills': mySkills, 'quotes': myQuotes, 'projects': allProjects
+        'about': myAbout, 'skills': mySkills, 'quotes': myQuotes, 'projects': allProjects,
+        'graphics': myDesigns
     };
     
     useEffect(() => {
@@ -69,6 +73,7 @@ function App({Component, pageProps}) {
                             myAbout={myAbout}
                             myQuotes={myQuotes}
                             mySkills={mySkills}
+                            myDesigns={myDesigns}
                         />
                     )
                 }
