@@ -8,7 +8,7 @@
   src: url('../../fonts/Dosis-Medium.ttf') format('truetype');
 }
 
-.nav{
+.nav {
   width: 100%;
   height: 100%;
   display: flex;
@@ -18,73 +18,65 @@
   box-sizing: border-box;
 }
 
-.nav article, .nav aside{
-  padding: 10px 10px ;
+.nav article, .nav aside {
+  padding: 10px 10px;
 }
 
-.nav article{
+.nav article {
   width: 30%;
-  font-weight:bolder;
+  font-weight: bolder;
   padding-left: 5%;
 }
 
-.nav .author{
+.nav .author {
   color: var(--actual_yellow);
   box-shadow: 0px 1px var(--yellow);
   font-family: 'Nabla', sans-serif;
   text-shadow: 0.02em 0.02em 0 var(--yellow), 0 0 0.5em var(--actual_yellow);
-  font-size:20px;
+  font-size: 20px;
 }
-.nav .author a{
+
+.nav .author a {
   font-size: 25px;
 }
-.nav aside{
+
+.nav aside {
   width: 70%;
   text-align: right;
   position: relative;
 }
-.nav aside .normal_menu{
-  width: 100%;
+
+.nav aside .normal_menu {
+  display: flex;
   justify-content: flex-end;
   align-items: center;
 }
+
 .nav aside a {
-  margin-left: 10px !important;
+  margin-left: 10px;
   font-weight: bold;
-  padding: 7px 10px ;
-  min-width: 300px !important;
-  color:rgba(255, 240, 190, 0.897);
-  background-image: linear-gradient(to right bottom,
-  var(--actual_yellow), var(--yellow), 
-  #190072, #001f4b, 
-  #12eb5e8c);
-  clip-path: polygon(10% 10%, 100% 100%, 100% 10%, 
-  10% 50%, 70% 100%, 100% 11%, 
-  10% 100%, 90% 100%, 100% 1%);
-  clip-path: padding-box xywh(0px 5px 100% 100% round 00% 10% 10% 50%);
-  background-color: red !important;
+  padding: 7px 10px;
+  color: rgba(255, 240, 190, 0.897);
+  background-image: linear-gradient(to right bottom, var(--actual_yellow), var(--yellow), #190072, #001f4b, #12eb5e8c);
+  clip-path: polygon(10% 10%, 100% 100%, 100% 10%, 10% 50%, 70% 100%, 100% 11%, 10% 100%, 90% 100%, 100% 1%);
 }
 
-.nav aside a:hover{
-  background-image: linear-gradient(to right bottom, 
-  #0d003a,  #12eb5e8c
-    );
-  color:greenyellow
-  }
-.nav aside a.active{
-  background-image: linear-gradient(to right bottom, 
-  #0d003a,  #12eb5e8c
-    );
-  color:greenyellow;
-  
+.nav aside a:hover {
+  background-image: linear-gradient(to right bottom, #0d003a, #12eb5e8c);
+  color: greenyellow;
 }
-.nav .author a:hover{
+
+.nav aside a.active {
+  background-image: linear-gradient(to right bottom, #0d003a, #12eb5e8c);
+  color: greenyellow;
+}
+
+.nav .author a:hover {
   color: violet;
-  box-shadow: 0px 1px Brown;
-
+  box-shadow: 0px 1px brown;
 }
 
-.nav aside .menu{
+.nav aside .menu {
   display: none;
   width: 30px;
   cursor: pointer;
@@ -93,7 +85,7 @@
   align-items: center;
 }
 
-.nav aside .menu .icon{
+.nav aside .menu .icon {
   width: 100%;
   height: 5px;
   background-color: whitesmoke;
@@ -101,12 +93,8 @@
   border-radius: 3px;
 }
 
-.nav aside .menu:hover .icon{
+.nav aside .menu:hover .icon {
   background-color: var(--yellow);
-}
-
-.nav aside .normal_menu{
-  display: block;
 }
 
 @keyframes slideInFromRight {
@@ -121,9 +109,10 @@
 }
 
 .nav aside .dropdown_menu {
+  display: none;
   list-style-type: none;
   position: absolute;
-  z-index: 1000000;
+  z-index: 1000;
   background-color: rgb(4, 0, 19);
   top: 56px;
   height: calc(100% - 58px - 43px);
@@ -132,27 +121,27 @@
   text-align: left;
   align-items: flex-start;
   padding-left: 30px;
-  animation: slideInFromRight 0.1s ease-out; /* Adjust the duration and easing as needed */
+  animation: slideInFromRight 0.1s ease-out;
 }
 
-.nav aside .dropdown_menu li{
+.nav aside .dropdown_menu li {
   margin-top: 30px;
 }
-@media (max-width: 650px){
-  .nav article{
-  }
-  .nav aside .normal_menu{
+
+@media (max-width: 650px) {
+  .nav aside .normal_menu {
     display: none;
   }
-  .nav aside .menu{
-    display: block;
+  .nav aside .menu {
+    display: flex;
   }
 }
-@media (min-width: 650px){
-  .nav aside .dropdown_menu{
+
+@media (min-width: 650px) {
+  .nav aside .dropdown_menu {
     display: none;
   }
-  .nav aside .menu{
+  .nav aside .menu {
     display: none;
   }
 }

@@ -5,11 +5,11 @@ import { page_links } from '../page_links';
 
 const Header = () => {
   const { pathname } = useRouter();
-  const [activeLink, setActiveLink] = useState(page_links.find(link=>link.name === 'HOME').link);
-  const [displayMenu, setDisplayMenu] = useState(false); // Use false for initial state
+  const [activeLink, setActiveLink] = useState(page_links.find(link => link.name === 'HOME').link);
+  const [displayMenu, setDisplayMenu] = useState(false);
 
   useEffect(() => {
-    if(pathname!=='/'){
+    if (pathname !== '/') {
       setActiveLink(pathname);
     }
   }, [pathname]);
@@ -21,6 +21,7 @@ const Header = () => {
   const changeDisplay = () => {
     setDisplayMenu(!displayMenu);
   };
+
   return (
     <nav className={styles.nav}>
       <article>
@@ -38,31 +39,27 @@ const Header = () => {
           ))}
         </div>
         <div className={styles.menu} onClick={changeDisplay}>
-          <div className={styles.icon}/>
-          <div className={styles.icon}/>
-          <div className={styles.icon}/>
+          <div className={styles.icon} />
+          <div className={styles.icon} />
+          <div className={styles.icon} />
         </div>
-        {
-          displayMenu && (
-            <ul className={styles.dropdown_menu}> 
-              {page_links.map((page, index) => (
-                <li>
-                <a href={page.link}
-                key={index} 
-                onClick={() => {
-                  handleLinkClick(page.link);
-                  changeDisplay();
-                }}
-                className={activeLink.endsWith(page.link) ? styles.active : ''}
-              >
-                {page.name}
-              </a>
-                </li>
-
-              ))}
-            </ul>
-          )
-        }
+        {displayMenu && (
+          <ul className={styles.dropdown_menu}>
+            {page_links.map((page, index) => (
+              <li key={index}>
+                <a href={`/${page.link}`}
+                  onClick={() => {
+                    handleLinkClick(page.link);
+                    changeDisplay();
+                  }}
+                  className={activeLink.endsWith(page.link) ? styles.active : ''}
+                >
+                  {page.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
       </aside>
     </nav>
   );
