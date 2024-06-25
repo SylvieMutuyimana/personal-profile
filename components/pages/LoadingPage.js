@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from '../../styles/module.css/loadingPage.module.css';
 
 const LoadingPage = ({ fetchPerc }) => {
-    const [timeoffline, setTime] = useState(61)
+    const [timeoffline, setTime] = useState(10)
     useEffect(() => {
         if(fetchPerc === 0 && timeoffline>0 ){
             const timer = setInterval(() => {
