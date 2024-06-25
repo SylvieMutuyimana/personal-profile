@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from '../../styles/module.css/loadingPage.module.css';
 
 const LoadingPage = ({ fetchPerc }) => {
+    const [timeoffline, setTime] = useState(60)
+    useEffect(() => {
+        if(fetchPerc === 0 && timeoffline>0 ){
+            const timer = setInterval(() => {
+                setTime((prevSeconds) => prevSeconds - 1);
+            }, 1000);
+            return () => clearInterval(timer);
+        }
+    },[fetchPerc, timeoffline])
     return (
         <div className={styles.thePage}>
             <div className={styles.loadingPage}>
@@ -11,7 +20,13 @@ const LoadingPage = ({ fetchPerc }) => {
                         style={{ width: `${fetchPerc}%` }}
                     ></div>
                 </div>
-                <div className={styles.loadingText}>Loading {fetchPerc}%</div>
+                {
+                    (timeoffline === 0 && fetchPerc===0) ?(
+                        <div className={styles.loadingText}>CHECK YOUR INTERNET DEAR!</div>
+                    ):(
+                        <div className={styles.loadingText}>Loading {fetchPerc}%</div>
+                    )
+                }
             </div>
         </div>
     );

@@ -1,9 +1,29 @@
 import styles from '../../styles/module.css/contact.module.css'
 import componentStyles from '../../styles/module.css/components.module.css';
+import { useState } from 'react';
 
 const Contact = () => {
+  const [details, setDetails] = useState({
+    name: null, email: null, 
+    phoneNum: false, message: null 
+  })
+  const [error, setError] = useState(null)
+  const [message, setMessage] = useState(null)
   const submitForm =()=>{
-
+    let missingDetails 
+    Object.entries(([key, data])=>{
+        if(isNaN(data) && data !==false){
+          return key
+        }
+      })
+    
+    if(missingDetails){
+      setMessage(null)
+      setError(missingDetails)
+    }else{
+      setError(null)
+      setMessage('Thank you for contacting me, I will get back to you in a few days!')
+    }
   }
   return (
     <div className={styles.contact} id={styles.contact}>    
@@ -65,6 +85,16 @@ const Contact = () => {
               <label htmlFor="message">Message:</label>
               <textarea id="message" name="message" textholder='Enter Message' required></textarea>
               <button type="submit" onClick={()=>submitForm()}>Send Message</button>
+              {
+                error && (
+                  <span className={styles.error}>{error}</span>
+                )
+              }
+              {
+                message && (
+                  <span className={styles.message}>{message}</span>
+                )
+              }
             </form>
           </aside>
       </div>

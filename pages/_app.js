@@ -14,7 +14,8 @@ function App({Component, pageProps}) {
     const [myDesigns, setDesigns] = useState(null);
     const [fetchPerc, setFetchPerc] = useState(0);
     const [completedFetches, setCompletedFetches] = useState(0);
-
+    
+ 
     const totalFetches = backendLinks.length;
 
     const fetchData = async (name, endpoint) => {
