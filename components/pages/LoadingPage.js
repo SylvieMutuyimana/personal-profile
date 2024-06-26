@@ -3,7 +3,10 @@ import styles from '../../styles/module.css/loadingPage.module.css';
 
 const LoadingPage = ({ fetchPerc }) => {
     const [timeoffline, setTime] = useState(60)
+    const [sessionTime, setSessTime] = useState(10)
     useEffect(() => {
+        const currFetc = fetchPerc
+        
         if(fetchPerc === 0 && timeoffline>0 ){
             const timer = setInterval(() => {
                 setTime((prevSeconds) => prevSeconds - 1);
