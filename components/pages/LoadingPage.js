@@ -5,8 +5,6 @@ const LoadingPage = ({ fetchPerc }) => {
     const [timeoffline, setTime] = useState(60)
     const [sessionTime, setSessTime] = useState(10)
     useEffect(() => {
-        const currFetc = fetchPerc
-        
         if(fetchPerc === 0 && timeoffline>0 ){
             const timer = setInterval(() => {
                 setTime((prevSeconds) => prevSeconds - 1);
@@ -14,6 +12,18 @@ const LoadingPage = ({ fetchPerc }) => {
             return () => clearInterval(timer);
         }
     },[fetchPerc, timeoffline])
+
+    useEffect(() => {
+        const currFetc = fetchPerc
+        const timer = setInterval(() => {
+            setSessTime((prevSeconds) => prevSeconds - 1);
+            if(sessionTime <= 0 && currFetc === fetchPerc ){
+                setTime(0)
+            }
+        }, 1000);
+        return () => clearInterval(timer);
+    },[fetchPerc, sessionTime])
+
     return (
         <div className={styles.thePage}>
             <div className={styles.loadingPage}>
