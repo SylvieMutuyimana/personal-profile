@@ -25,9 +25,9 @@ const LoadingPage = ({ fetchPerc }) => {
                 </div>
                 {
                     (timeoffline === 0 && fetchPerc===0) ?(
-                        <div className={styles.loadingText}>CHECK YOUR INTERNET DEAR!</div>
+                        <div className={styles.loadingText} style={{color:'red'}}>CHECK YOUR INTERNET DEAR!</div>
                     ):(
-                        <div className={styles.loadingText} style={{color:'red'}}>Loading {fetchPerc}%</div>
+                        <div className={styles.loadingText}>Loading {fetchPerc}%</div>
                     )
                 }
             </div>
