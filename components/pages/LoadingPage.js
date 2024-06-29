@@ -2,27 +2,32 @@ import React, { useEffect, useState } from "react";
 import styles from '../../styles/module.css/loadingPage.module.css';
 
 const LoadingPage = ({ fetchPerc }) => {
-    const [timeoffline, setTime] = useState(60)
-    const [sessionTime, setSessTime] = useState(10)
-    useEffect(() => {
-        if(fetchPerc === 0 && timeoffline>0 ){
-            const timer = setInterval(() => {
-                setTime((prevSeconds) => prevSeconds - 1);
-            }, 1000);
-            return () => clearInterval(timer);
-        }
-    },[fetchPerc, timeoffline])
+    const [timeoffline, setSessTime] = useState(0)
+    const [currFetc, setCurrentFetch ] = useState(fetchPerc)
+    const [loading, setLoading] = useState(true)
 
-    useEffect(() => {
-        const currFetc = fetchPerc
+    useEffect(()=>{
+        let countdown = 5
         const timer = setInterval(() => {
-            setSessTime((prevSeconds) => prevSeconds - 1);
-            if(sessionTime <= 0 && currFetc === fetchPerc ){
-                setTime(0)
+            countdown = countdown - 1
+            if(countdown <=0){
+                setCurrentFetch(fetchPerc)
             }
         }, 1000);
         return () => clearInterval(timer);
-    },[fetchPerc, sessionTime])
+    },[fetchPerc])
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setSessTime((prevSeconds) => prevSeconds + 1);
+            if(timeoffline >= 5 && currFetc === fetchPerc ){
+                setLoading(false)
+            }else{
+                setLoading(true)
+            }
+        }, 1000);
+        return () => clearInterval(timer);
+    },[currFetc, timeoffline])
 
     return (
         <div className={styles.thePage}>
@@ -34,10 +39,10 @@ const LoadingPage = ({ fetchPerc }) => {
                     ></div>
                 </div>
                 {
-                    (timeoffline === 0 && fetchPerc===0) ?(
-                        <div className={styles.loadingText} style={{color:'red'}}>CHECK YOUR INTERNET DEAR!</div>
-                    ):(
+                    loading?(
                         <div className={styles.loadingText}>Loading {fetchPerc}%</div>
+                    ):(
+                        <div className={styles.loadingText} style={{color:'red'}}>CHECK YOUR INTERNET DEAR!</div>
                     )
                 }
             </div>

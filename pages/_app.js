@@ -61,6 +61,7 @@ function App({Component, pageProps}) {
     useEffect(()=>{
         setFetchPerc((completedFetches / totalFetches) * 100)
     },[completedFetches])
+    
     return (
         <RootLayout>
             <div className={styles.page}>
