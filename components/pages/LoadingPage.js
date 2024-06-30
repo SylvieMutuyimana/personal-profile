@@ -7,6 +7,7 @@ const LoadingPage = ({ fetchPerc }) => {
     const [loading, setLoading] = useState(true)
 
     useEffect(()=>{
+        setLoading(true)
         let countdown = 5
         const timer = setInterval(() => {
             countdown = countdown - 1
@@ -18,11 +19,14 @@ const LoadingPage = ({ fetchPerc }) => {
     },[fetchPerc])
 
     useEffect(() => {
+        setSessTime(0)
         const timer = setInterval(() => {
             setSessTime((prevSeconds) => prevSeconds + 1);
-            if(timeoffline >= 5 && currFetc === fetchPerc ){
-                setLoading(false)
-            }else{
+            if(timeoffline >= 6 && currFetc === fetchPerc){
+                if(loading){
+                    setLoading(false)
+                }
+            }else if(!loading){
                 setLoading(true)
             }
         }, 1000);
