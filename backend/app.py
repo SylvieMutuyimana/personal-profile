@@ -5,7 +5,7 @@ from api.quotes import allquotesData, quoteRoute
 from api.skills import allSkills_Route, skillTypeData_Route
 from api.projects import allProjects_Route, projectTypeData_Route
 from api.graphics import allDesigns_Route, theDesignData_Route
-
+from api.receiveemail import send_email 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})  # Allow CORS for all routes and origins
 
@@ -33,6 +33,9 @@ app.add_url_rule('/projects/<projectType>', 'projectTypeData_Route', projectType
 # Graphics routes
 app.add_url_rule('/graphics', 'allDesigns_Route', allDesigns_Route, methods=['GET'])
 app.add_url_rule('/graphics/<designId>', 'theDesignData_Route', theDesignData_Route, methods=['GET'])
+
+#sending emair
+app.add_url_rule('/send-email', 'allDesigns_Route', send_email, methods=['POST'])
 
 if __name__ == "__main__":
     app.run(debug=True)
