@@ -3,7 +3,7 @@ from flask_cors import CORS
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-
+#imports
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
