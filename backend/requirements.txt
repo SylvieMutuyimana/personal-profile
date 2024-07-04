@@ -4,3 +4,5 @@ mysql-connector-python
 flask-cors
 qrcode
 gunicorn
+smtplib
+email
