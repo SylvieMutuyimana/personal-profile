@@ -9,6 +9,7 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 
 @app.route('/send-email', methods=['POST'])
 def send_email():
+    
     data = request.get_json()
     sender_email = data['name']
     email = data['email']
@@ -17,7 +18,6 @@ def send_email():
 
     try:
         receiver_email = "mutuyimanasylvie@gmail.com"
-
         msg = MIMEMultipart()
         msg['From'] = email
         msg['To'] = receiver_email
