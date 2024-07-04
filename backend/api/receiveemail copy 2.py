@@ -25,19 +25,17 @@ def sendtheEmail(sender_email, receiver_email, subject, body, sender_password):
     try:
         server = smtplib.SMTP(smtp_server, smtp_port)
         server.starttls()  # Secure the connection
-        print('sender_email: ', sender_email)
-        print('sender_password: ', sender_password)
         server.login(sender_email, sender_password)
 
         # Send email
         server.sendmail(sender_email, receiver_email, message.as_string())
-        return 'Email sent successfully'
+        return {status: 200}
     except Exception as e:
-        return f"Error sending email: {str(e)}"
+        return {status: 500}
     finally:
         server.quit()  # Disconnect from the server
         
-@app.route('/send-email', methods=['POST'])
+@app.route('/send-email', methods=['GET', 'POST'])
 def sendEmail_Route():
     if request.method == 'POST':
         # Check if the data is in JSON format
@@ -53,19 +51,17 @@ def sendEmail_Route():
             sender_email = request.form.get('email')
             phoneNum = request.form.get('phoneNum')
             body = request.form.get('message')
-        
         subject = "Reaching out to you from your website"
-        message_body = f"Hello, my name is {name}, my email is {sender_email}, my phone number is {phoneNum}.\n{body}"
+
+        receiver_email = "mutuyimanasylvie@gmail.com"
+        sender_password = "mutuyimana sylvie"
+        message = f"Hello, my name is {name}, my email is {sender_email}, my phone number is {phoneNum}. \n{body}"
         
+    
         try:
-            receiver_email = "mutuyimanasylvie@gmail.com"
-            sender_email = "mudzdavid917@gmail.com"
-            sender_password = "mutuyimana sylvie"
-            message = sendtheEmail(sender_email, receiver_email, subject, message_body, sender_password)
-            if 'successfully' in message:
-                return jsonify({'message': message}), 200
+            if sendtheEmail(sender_email, receiver_email, subject, message_body, sender_password):
+                return jsonify({'message': 'Email sent successfully'}), 200
             else:
-                print(f"Error: {message}")
                 return jsonify({'message': 'Error sending email'}), 500
         except Exception as e:
             print(f"Error: {str(e)}")
