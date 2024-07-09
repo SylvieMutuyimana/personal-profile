@@ -14,6 +14,7 @@ def sendtheEmail(sender_email, receiver_email, subject, body, sender_password):
 
     # Create a multipart message and set headers
     message = MIMEMultipart()
+    
     message['From'] = sender_email
     message['To'] = receiver_email
     message['Subject'] = subject
